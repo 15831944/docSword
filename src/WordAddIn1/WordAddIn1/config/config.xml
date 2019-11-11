@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configItems>
+
+  
+  <!--2017_02 v2.0  -->
+  
+  <item name="cfgTempFileLoc"  value="d:\temp">
+  </item>
+
+  <!-- 个人版
+  <item name="cfgAutoUpdateSvrUrl"  value="">
+  </item>
+
+  <item name="cfgUiCtrlSvrUrl"  value="">
+  </item>
+
+  <item name="cfgCerSvrUrl"  value="">
+  </item>
+  -->
+  
+
+  <!-- 企业版 -->
+  <item name="cfgAutoUpdateSvrUrl"  value="http://10.115.246.179:30001/WordAddinService.asmx">
+  </item>
+
+  <item name="cfgUiCtrlSvrUrl"  value="http://10.115.246.198:8080/udp/ClientFmsService">
+  </item>
+  
+  <item name="cfgCerSvrUrl"  value="http://10.115.246.179:30001/WordAddinService.asmx">
+  </item>
+  
+  
+  <!--企业版 带文库 Doc repository -->
+  
+  <item name="cfgDocRepositoryUrl"  value="http://10.115.246.198:8080/udp/ClientFmsService">
+  </item>
+
+  <item name="cfgLoginUrl"  value="http://10.115.246.198:8080/udp/servlet/login">
+  </item>
+
+  <item name="cfgUploadFileUrl"  value="http://10.115.246.198:8080/udp/servlet/fileupload">
+  </item>
+  
+
+</configItems>
+
+

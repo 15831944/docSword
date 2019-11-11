@@ -1,0 +1,4 @@
+F:\Work\OpenSource\docSword\plg\src\OfficeAssistCommon\OfficeAssistCommon\bin\Release\Microsoft.Office.Tools.Word.Common.dll
+F:\Work\OpenSource\docSword\plg\src\OfficeAssistCommon\OfficeAssistCommon\bin\Release\Microsoft.Office.Tools.Word.Common.pdb
+F:\Work\OpenSource\docSword\plg\src\OfficeAssistCommon\OfficeAssistCommon\obj\Release\Microsoft.Office.Tools.Word.Common.dll
+F:\Work\OpenSource\docSword\plg\src\OfficeAssistCommon\OfficeAssistCommon\obj\Release\Microsoft.Office.Tools.Word.Common.pdb

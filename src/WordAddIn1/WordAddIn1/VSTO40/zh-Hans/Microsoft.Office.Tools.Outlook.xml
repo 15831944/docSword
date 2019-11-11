@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Office.Tools.Outlook</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Office.Tools.Outlook.Factory">
+      <summary>提供可用于在 Outlook 外接程序中执行杂项任务（如创建窗体区域控件、窗体区域清单对象和自定义操作）的方法。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionCollection">
+      <summary>创建 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 对象的 <see cref="T:System.Collections.Generic.IList`1" />。</summary>
+      <returns>
+        <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 对象的 <see cref="T:System.Collections.Generic.IList`1" />。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionControl(Microsoft.Office.Interop.Outlook.FormRegion,Microsoft.Office.Tools.IExtension)">
+      <summary>创建实现 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionControl" /> 接口的类的实例。</summary>
+      <returns>一个基于用户控件的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionControl" />。</returns>
+      <param name="region">一个表示本机窗体区域的 <see cref="T:Microsoft.Office.Interop.Outlook.FormRegion" />。</param>
+      <param name="extension">实现 <see cref="T:Microsoft.Office.Tools.IExtension" /> 接口的类的实例。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionCustomAction">
+      <summary>创建实现 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" /> 接口的类的实例，使用默认名称。</summary>
+      <returns>表示自定义操作的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" />。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionCustomAction(System.String)">
+      <summary>创建实现 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" /> 接口的类的实例，使用指定名称。</summary>
+      <returns>表示自定义操作的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" />。</returns>
+      <param name="name">一个字符串，表示自定义操作的名称。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionInitializingEventArgs(System.Object,Microsoft.Office.Interop.Outlook.OlFormRegionMode,Microsoft.Office.Interop.Outlook.OlFormRegionSize,System.Boolean)">
+      <summary>创建一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs" /> 对象，该对象为窗体区域工厂类的 FormRegionInitializing 事件提供数据。</summary>
+      <returns>一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs" />，为窗体区域工厂类的 FormRegionInitializing 事件提供数据。</returns>
+      <param name="outlookItem">导致窗体区域加载的 Outlook 项。</param>
+      <param name="formRegionMode">导致窗体区域加载的 Outlook 项的模式。此模式由 <see cref="T:Microsoft.Office.Interop.Outlook.OlFormRegionMode" /> 枚举表示。</param>
+      <param name="formRegionSize">加载的窗体区域的类型。此模式由 <see cref="T:Microsoft.Office.Interop.Outlook.OlFormRegionSize" /> 枚举表示。</param>
+      <param name="cancel">一个 <see cref="T:System.Boolean" /> 值，该值指示是否应为 <paramref name="outlookItem" /> 显示窗体区域。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionManifest">
+      <summary>创建一个窗体区域清单，该清单描述窗体区域如何显示在 Outlook 中。</summary>
+      <returns>一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" />，描述窗体区域如何显示在 Outlook 中。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.Factory.CreateImportedFormRegion(Microsoft.Office.Interop.Outlook.FormRegion,Microsoft.Office.Tools.Outlook.IImportedFormRegionExtension)">
+      <summary>创建基于 Outlook 窗体存储 (*.ofs) 文件的 Microsoft Office Outlook 窗体区域。</summary>
+      <returns>一个 <see cref="T:Microsoft.Office.Tools.Outlook.ImportedFormRegion" />，表示基于 Outlook 窗体存储文件 (*.ofs) 的窗体区域。</returns>
+      <param name="region">一个表示本机窗体区域的 <see cref="T:Microsoft.Office.Interop.Outlook.FormRegion" />。</param>
+      <param name="extension">实现 <see cref="T:Microsoft.Office.Tools.Outlook.IImportedFormRegionExtension" /> 接口的类的实例。</param>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionControl">
+      <summary>表示基于用户控件的 Outlook 窗体区域。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionControl.Factory">
+      <summary>获取或设置与此 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionControl" /> 关联的窗体区域工厂。</summary>
+      <returns>实现 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegionFactory" /> 接口的对象。</returns>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionClosed">
+      <summary>在窗体区域关闭前发生。</summary>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing">
+      <summary>在创建窗体区域的实例后但在窗体区域显示前发生。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionControl.Manifest">
+      <summary>获取一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" />，它描述窗体区域在 Outlook 中的显示方式。</summary>
+      <returns>
+        <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" />，它描述窗体区域在 Outlook 中的显示方式。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionControl.OutlookFormRegion">
+      <summary>获取或设置本机窗体区域对象。</summary>
+      <returns>一个表示窗体区域的 <see cref="T:Microsoft.Office.Interop.Outlook._FormRegion" />。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionControl.OutlookItem">
+      <summary>获取显示窗体区域的 Outlook 项。</summary>
+      <returns>一个 <see cref="T:System.Object" />，表示显示窗体区域的 Outlook 项。</returns>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction">
+      <summary>表示 Outlook 项的功能区的“自定义操作”组中显示的自定义操作。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.AddressLike">
+      <summary>获取或设置一个值，该值指定如何对在用户执行自定义操作时显示的窗体进行寻址。</summary>
+      <returns>
+        <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike" /> 值之一，该值指定如何对在用户执行自定义操作时显示的目标窗体进行寻址。默认值为 <see cref="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.Reply" />。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.Body">
+      <summary>获取或设置一个值，该值指定如何将 Outlook 项的“邮件”或“备注”字段包含在用户执行自定义操作时出现的答复中。</summary>
+      <returns>
+        <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionBody" /> 值之一，该值指定如何将 Outlook 项的“邮件”或“备注”字段追加到在用户执行自定义操作时出现的窗体中。默认值为 <see cref="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionBody.User" />。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.Enabled">
+      <summary>获取或设置一个值，该值指示是否为窗体区域启用了 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" />。</summary>
+      <returns>如果启用了 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" />，则为 true；否则为 false。默认值为 true。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.Method">
+      <summary>获取或设置一个值，该值指定当用户执行自定义操作时如何响应。</summary>
+      <returns>
+        <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionMethod" /> 值之一，该值指定当用户执行自定义操作时如何响应。默认值为 <see cref="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionMethod.Open" />。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.Name">
+      <summary>获取或设置自定义操作的名称。</summary>
+      <returns>一个字符串，表示自定义操作的名称。</returns>
+      <exception cref="T:System.ArgumentNullException">该值为 null 或空。</exception>
+      <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.ShowOnRibbon">
+      <summary>获取或设置一个值，该值指示是否在显示窗体区域的功能区的“自定义操作”组中显示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" />。</summary>
+      <returns>如果 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" /> 出现在功能区中，则为 true；否则为 false。默认值为 true。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.SubjectPrefix">
+      <summary>获取或设置在答复的主题行开头显示的文本。</summary>
+      <returns>一个字符串，表示在原始窗体的主题行开头显示的文本。</returns>
+      <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.TargetForm">
+      <summary>获取或设置当用户执行自定义操作时显示的窗体的邮件类。</summary>
+      <returns>一个字符串，表示当用户执行自定义操作时显示的窗体的邮件类。</returns>
+      <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
+      <exception cref="T:Microsoft.Office.Tools.Outlook.InvalidMessageClassException">该字符串的值为空或包含无效的邮件类的名称。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.Title">
+      <summary>获取或设置一个名称，该名称用于标识功能区的“自定义操作”组中的自定义操作。</summary>
+      <returns>一个字符串，表示用于标识功能区的“自定义操作”组中的自定义操作的名称。</returns>
+      <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.ToXml">
+      <summary>返回一个以 XML 形式表示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" /> 的字符串。</summary>
+      <returns>一个以 XML 形式表示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" /> 的字符串。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.ToXml(System.Xml.XmlWriter)">
+      <summary>将字符串中包含的自定义操作的 XML 表示形式保存到 <see cref="T:System.Xml.XmlTextWriter" /> 对象。</summary>
+      <param name="writer">要将字符串写入其中的 <see cref="T:System.Xml.XmlTextWriter" />。</param>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike">
+      <summary>指定如何定义当用户执行自定义操作时显示的目标项。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.Reply">
+      <summary>将新项作为原始项的回复。如果创建新邮件，此选项会将邮件的“发件人”字段中显示的地址复制到新邮件的“收件人”字段中。新邮件的“主题”字段中显示的文本包含在原始“主题”字段中显示的文本。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.ReplyAll">
+      <summary>将新项作为对原始项的所有发件人和收件人的回复。如果创建新邮件项，此选项会将邮件的“发件人”和“收件人”字段中显示的地址复制到目标窗体的“收件人”字段中。此选项还将邮件的“抄送”字段中显示的地址复制到目标窗体的“抄送”字段中。新邮件的“主题”字段中显示的文本包含在原始“主题”字段中显示的文本。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.Forward">
+      <summary>将新项作为原始项的转发。如果创建新邮件，此选项将清除新邮件的“收件人”和“抄送”字段。新邮件的“主题”字段中显示的文本包含在原始“主题”字段中显示的文本。原始项上的附件复制到新项。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.ReplyToFolder">
+      <summary>如果创建新公告项，此选项将把该项发送到活动文件夹。此项还将“主题”字段中显示的文本复制到新项的“对话”字段中。然后清除新项的“主题”字段。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.Response">
+      <summary>使自定义操作按钮在单击功能区的“响应”组的“投票”按钮时显示。</summary>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionBody">
+      <summary>指定 Outlook 项的“邮件”或“备注”字段如何包含到当用户执行自定义操作时出现的回复中。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionBody.Omit">
+      <summary>回复不包含对原始项或原始项文本的引用。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionBody.Attach">
+      <summary>回复以附件形式包含原始项。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionBody.Include">
+      <summary>回复包含原始项的文本。此文本显示在回复的正文中。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionBody.Indent">
+      <summary>回复包含原始项的文本。文本在回复的正文中缩进。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionBody.Prefix">
+      <summary>回复包含原始项的文本。文本显示在回复的正文中。每行文本的前面是您为 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" /> 的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.SubjectPrefix" /> 属性指定的前缀。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionBody.User">
+      <summary>回复包含原始项的文本。文本显示在回复的正文中。“主题”字段中的文本使用默认前缀。例如，如果将 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" /> 的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.AddressLike" /> 属性设置为 <see cref="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.Reply" />，则“主题”字段中的文本以“RE:”开头。</summary>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionCollection">
+      <summary>表示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" /> 对象的集合。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCustomActionCollection.Contains(System.String)">
+      <summary>返回一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionCollection" /> 是否包含具有指定名称的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" />。</summary>
+      <returns>如果字符串与集合中的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" /> 的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.Name" /> 属性匹配，则为 true；否则为 false。</returns>
+      <param name="actionName">一个字符串，标识 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionCollection" /> 中的一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" />。</param>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCustomActionCollection.Manifest">
+      <summary>获取或设置与此 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionCollection" /> 关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象。</summary>
+      <returns>一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" />，表示与此自定义操作关联的窗体区域的属性。</returns>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionMethod">
+      <summary>指定当用户执行自定义操作时如何响应。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionMethod.Open">
+      <summary>打开一个新窗体。 </summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionMethod.Prompt">
+      <summary>提示用户打开或发送新窗体。 </summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionCustomActionMethod.Send">
+      <summary>立即发送该窗体。 </summary>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionFactoryResolveEventArgs">
+      <summary>为 <see cref="T:Microsoft.Office.Tools.Outlook.OutlookAddIn" /> 的 <see cref="E:Microsoft.Office.Tools.Outlook.OutlookAddIn.FormRegionFactoryResolve" /> 事件提供数据。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionFactoryResolveEventArgs.FormRegionFactory">
+      <summary>获取或设置定义窗体区域的窗体区域工厂类。</summary>
+      <returns>实现 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegionFactory" /> 接口的类的实例。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionFactoryResolveEventArgs.Name">
+      <summary>获取 Outlook 尝试解析的窗体区域的名称。</summary>
+      <returns>窗体区域的名称。</returns>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionFactoryResolveEventHandler">
+      <summary>表示将要处理 <see cref="T:Microsoft.Office.Tools.Outlook.OutlookAddIn" /> 的 <see cref="E:Microsoft.Office.Tools.Outlook.OutlookAddIn.FormRegionFactoryResolve" /> 事件的方法。</summary>
+      <param name="sender">事件源。</param>
+      <param name="e">事件的相关数据。</param>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs">
+      <summary>为窗体区域工厂类的 FormRegionInitializing 事件提供数据。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs.Cancel">
+      <summary>获取或设置一个值，该值指示是否应为当前 Outlook 项显示窗体区域。</summary>
+      <returns>一个 <see cref="T:System.Boolean" />，它指示是否应为当前 Outlook 项显示窗体区域。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs.FormRegionMode">
+      <summary>获取导致窗体区域加载的 Microsoft Office Outlook 项的模式。</summary>
+      <returns>一个 <see cref="T:Microsoft.Office.Interop.Outlook.OlFormRegionMode" />，表示导致窗体区域加载的 Outlook 项的模式。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs.FormRegionSize">
+      <summary>获取加载的窗体区域的类型。</summary>
+      <returns>一个 <see cref="T:Microsoft.Office.Interop.Outlook.OlFormRegionSize" />，表示加载的窗体区域的类型。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs.OutlookItem">
+      <summary>获取导致窗体区域加载的 Microsoft Office Outlook 项。</summary>
+      <returns>一个 <see cref="T:System.Object" />，表示导致窗体区域加载的 Outlook 项。</returns>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventHandler">
+      <summary>表示将要处理窗体区域的 FormRegionInitializing 事件的方法。</summary>
+      <param name="sender">事件源。</param>
+      <param name="e">事件的相关数据。</param>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionKindConstants">
+      <summary>包含一些常量，这些常量指定窗体区域工厂创建的窗体区域是基于用户控件，还是基于 Outlook 窗体存储 (.ofs) 文件。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.WindowsForms">
+      <summary>指定窗体区域基于用户控件。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.Ofs">
+      <summary>指定窗体区域从 Outlook 导入。</summary>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionManifest">
+      <summary>表示一个窗体区域清单，该清单描述窗体区域如何出现在 Outlook 中。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Contact">
+      <summary>获取或设置出现在 Outlook 的“选择窗体”对话框中的用来表示替换和全部替换窗体区域的名称。</summary>
+      <returns>一个字符串，表示出现在 Outlook 的“选择窗体”对话框中的用来表示替换和全部替换窗体区域的名称。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+      <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.CustomActions">
+      <summary>获取一个集合，该集合包含在显示窗体区域的 Outlook 项功能区的“自定义操作”组中出现的所有自定义操作。</summary>
+      <returns>一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionCollection" />，包含在显示窗体区域的 Outlook 项功能区的“自定义操作”组中出现的所有自定义操作。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Description">
+      <summary>获取或设置 Outlook 的“选择窗体”对话框中出现的用来表示替换和全部替换窗体区域的文本。</summary>
+      <returns>一个字符串，表示 Outlook 的“选择窗体”对话框中出现的用来表示替换和全部替换窗体区域的文本。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+      <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.DisplayAfter">
+      <summary>获取或设置要在此窗体区域前显示的窗体区域的名称。</summary>
+      <returns>一个字符串，表示要在此窗体区域前显示的窗体区域的名称。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+      <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.ExactMessageClass">
+      <summary>获取或设置一个值，该值指示窗体区域是否由派生的邮件类显示。</summary>
+      <returns>如果窗体区域不是由派生的邮件类显示，则为 true；否则为 false。默认值为 false。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.FormRegionFactory"></member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.FormRegionName">
+      <summary>获取或设置出现在 Outlook 项的功能区中或相邻窗体区域的标题文本中的文本。</summary>
+      <returns>一个字符串，包含出现在 Outlook 项的功能区中或相邻窗体区域的标题文本中的文本。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+      <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.FormRegionType">
+      <summary>获取或设置一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionType" />，用于确定窗体区域如何出现在 Outlook 中。</summary>
+      <returns>一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionType" />，确定窗体区域如何出现在 Outlook 中。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+      <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Hidden">
+      <summary>获取或设置一个值，该值指示替换和全部替换窗体区域是否出现在 Outlook 的“选择窗体”对话框中。</summary>
+      <returns>如果替换和全部替换窗体区域不出现在 Outlook 的“选择窗体”对话框中，则为 true；否则为 false。默认值为 false。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Icons">
+      <summary>获取或设置一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons" />，它指定为单独的、替换和全部替换窗体区域显示的图标。</summary>
+      <returns>一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons" />，指定为单独的、替换和全部替换窗体区域显示的图标。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.LoadLegacyForm">
+      <summary>获取或设置一个值，该值指示 Outlook 在加载此窗体区域之前是否加载旧版窗体。</summary>
+      <returns>如果 Outlook 在加载此窗体区域之前加载旧版窗体，则为 true；否则为 false。默认值为 false。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked">
+      <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 的属性是否可以修改。</summary>
+      <returns>如果 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 的属性不能修改，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.RibbonAccelerator">
+      <summary>获取或设置单独的、替换和全部替换窗体区域的键盘快捷方式。</summary>
+      <returns>一个字符串，表示单独的、替换和全部替换窗体区域的键盘快捷方式。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+      <exception cref="T:System.ArgumentException">该值的长度大于 2 个字符或包含非字母数字字符。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.ShowInspectorCompose">
+      <summary>获取或设置一个值，该值指示在 Outlook 检查器处于撰写模式时是否显示此窗体区域。</summary>
+      <returns>如果在 Outlook 检查器处于撰写模式时显示此窗体区域，则为 true；否则为 false。默认值为 true。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.ShowInspectorRead">
+      <summary>获取或设置一个值，该值指示在 Outlook 检查器处于读取模式时是否显示此窗体区域。</summary>
+      <returns>如果在 Outlook 检查器处于读取模式时显示此窗体区域，则为 true；否则为 false。默认值为 true。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.ShowReadingPane">
+      <summary>获取或设置一个值，该值指示是否在阅读窗格中显示该窗体区域。</summary>
+      <returns>如果在阅读窗格中显示该窗体区域，则为 true；否则为 false。默认值为 false。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Title">
+      <summary>获取或设置出现在 Outlook 的“操作”菜单和“选择窗体”对话框中的用来表示替换和全部替换窗体区域的名称。</summary>
+      <returns>一个字符串，表示出现在 Outlook 的“操作”菜单和“选择窗体”对话框中的用来表示替换和全部替换窗体区域的文本。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+      <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionManifest.ToXml">
+      <summary>创建一个以 XML 形式表示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 的字符串。</summary>
+      <returns>一个以 XML 形式表示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 的字符串。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionManifest.ToXml(System.Xml.XmlWriter)">
+      <summary>创建一个以 XML 形式表示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 的字符串并将其保存到一个 <see cref="T:System.Xml.XmlTextWriter" /> 实例。</summary>
+      <param name="writer">要将字符串写入其中的 <see cref="T:System.Xml.XmlTextWriter" />。</param>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Version">
+      <summary>获取或设置窗体区域的版本号。</summary>
+      <returns>一个字符串，表示窗体区域的版本号。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 true。</exception>
+      <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons">
+      <summary>表示为单独、替换和全部替换窗体区域显示的图标的集合。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Default">
+      <summary>获取或设置为替换和全部替换窗体区域显示的默认图标。</summary>
+      <returns>在显示替换和全部替换窗体区域的资源管理器中默认显示的 <see cref="T:System.Drawing.Icon" />。</returns>
+      <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 属性为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Encrypted">
+      <summary>获取或设置为具有替换或全部替换窗体区域的加密项显示的图标。</summary>
+      <returns>为具有替换或全部替换窗体区域的加密项显示的 <see cref="T:System.Drawing.Icon" />。</returns>
+      <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 属性为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Forwarded">
+      <summary>获取或设置为具有替换或全部替换窗体区域的转发项显示的图标。</summary>
+      <returns>为具有替换或全部替换窗体区域的转发项显示的 <see cref="T:System.Drawing.Icon" />。</returns>
+      <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 属性为 true。</exception>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.GetIcon(Microsoft.Office.Interop.Outlook.OlFormRegionIcon)">
+      <summary>返回将为窗体区域的特定类型图标显示的图像。</summary>
+      <returns>一个表示图标的 <see cref="T:stdole.IPictureDisp" />。</returns>
+      <param name="icon">Microsoft.Office.Interop.Outlook.OlFormRegionIcon，表示要返回的图标类型。</param>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Manifest">
+      <summary>与此 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons" /> 关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 实例。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Page">
+      <summary>获取或设置一个图标，该图标显示在具有单独、替换或全部替换窗体区域的项的检查器的功能区中。</summary>
+      <returns>一个 <see cref="T:System.Drawing.Image" />，它显示在具有单独、替换或全部替换窗体区域的项的检查器的功能区中。</returns>
+      <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 属性为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Read">
+      <summary>获取或设置为具有替换或全部替换窗体区域并标记为已读的项显示的图标。</summary>
+      <returns>为具有替换或全部替换窗体区域并标记为已读的项显示的 <see cref="T:System.Drawing.Icon" />。</returns>
+      <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 属性为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Recurring">
+      <summary>获取或设置为具有替换或全部替换窗体区域的重复项显示的图标。</summary>
+      <returns>为具有替换或全部替换窗体区域的重复项显示的 <see cref="T:System.Drawing.Icon" />。</returns>
+      <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 属性为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Replied">
+      <summary>获取或设置为具有替换或全部替换窗体区域的回复项显示的图标。</summary>
+      <returns>为具有替换或全部替换窗体区域的回复项显示的 <see cref="T:System.Drawing.Icon" />。</returns>
+      <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 属性为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Signed">
+      <summary>获取或设置为具有替换或全部替换窗体区域的数字签名项显示的图标。</summary>
+      <returns>为具有替换或全部替换窗体区域的数字签名项显示的 <see cref="T:System.Drawing.Icon" />。</returns>
+      <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 属性为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Submitted">
+      <summary>获取或设置为具有替换或全部替换窗体区域的已提交项显示的图标。</summary>
+      <returns>为具有替换或全部替换窗体区域的已提交项显示的 <see cref="T:System.Drawing.Icon" />。</returns>
+      <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 属性为 true。</exception>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.ToXml">
+      <summary>创建一个以 XML 形式表示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons" /> 的字符串。</summary>
+      <returns>以 XML 形式表示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons" /> 的字符串。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.ToXml(System.Xml.XmlWriter)">
+      <summary>以字符串形式创建 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons" /> 的 XML 表示形式，并将其保存到 <see cref="T:System.Xml.XmlTextWriter" /> 实例。</summary>
+      <param name="writer">要将字符串写入其中的 <see cref="T:System.Xml.XmlTextWriter" />。</param>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Unread">
+      <summary>获取或设置为具有替换或全部替换窗体区域并标记为未读的项显示的图标。</summary>
+      <returns>为具有替换或全部替换窗体区域并标记为未读的项显示的 <see cref="T:System.Drawing.Icon" />。</returns>
+      <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 属性为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Unsent">
+      <summary>获取或设置为具有替换或全部替换窗体区域的未发送项显示的图标。</summary>
+      <returns>为具有替换或全部替换窗体区域的未发送项显示的 <see cref="T:System.Drawing.Icon" />。</returns>
+      <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 属性为 true。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Window">
+      <summary>获取或设置一个图标，该图标显示在通知区域中，而对于显示替换和全部替换窗体区域的打开项，该图标显示在通知区域和“ALT+TAB”对话框中。</summary>
+      <returns>一个 <see cref="T:System.Drawing.Icon" />，该图标显示在通知区域中，而对于显示替换和全部替换窗体区域的打开项，该图标显示在通知区域和“ALT+TAB”对话框中。</returns>
+      <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 对象的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 属性为 true。</exception>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionType">
+      <summary>指定窗体区域在 Microsoft Office Outlook 中的显示方式。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionType.Adjoining">
+      <summary>将窗体区域追加到 Outlook 窗体的默认页的底部。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionType.Replacement">
+      <summary>将窗体区域添加为替换 Outlook 窗体的默认页的新页。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionType.ReplaceAll">
+      <summary>用窗体区域替换整个 Outlook 窗体。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionType.Separate">
+      <summary>将窗体区域添加为 Outlook 窗体中的新页。</summary>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.IFormRegion">
+      <summary>定义一个接口，该接口公开窗体区域的事件所使用的方法。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.IFormRegion.OnShutdown">
+      <summary>在窗体区域关闭前发生。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.IFormRegion.OnStartup">
+      <summary>在创建窗体区域的实例后但在窗体区域显示前发生。</summary>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.IFormRegionFactory">
+      <summary>定义一个接口，该接口创建实现 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 的类的实例。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.IFormRegionFactory.CreateFormRegion(Microsoft.Office.Interop.Outlook.FormRegion)">
+      <summary>返回实现 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 接口的类的实例。</summary>
+      <returns>实现 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 接口的类的实例。</returns>
+      <param name="formRegion">一个表示本机窗体区域的 <see cref="T:Microsoft.Office.Interop.Outlook.FormRegion" />。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.IFormRegionFactory.GetFormRegionStorage(System.Object,Microsoft.Office.Interop.Outlook.OlFormRegionMode,Microsoft.Office.Interop.Outlook.OlFormRegionSize)">
+      <summary>返回一个 Outlook 窗体存储 (.ofs) 文件。</summary>
+      <returns>一个 <see cref="T:System.Byte" /> 数组，该数组包含 .ofs 文件的内容。</returns>
+      <param name="outlookItem">导致窗体区域加载的 Outlook 项。</param>
+      <param name="formRegionMode">导致窗体区域加载的 Outlook 项的模式。此模式由 <see cref="T:Microsoft.Office.Interop.Outlook.OlFormRegionMode" /> 枚举表示。</param>
+      <param name="formRegionSize">正在加载的窗体区域的类型。此模式由 <see cref="T:Microsoft.Office.Interop.Outlook.OlFormRegionSize" /> 枚举表示。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.IFormRegionFactory.IsDisplayedForItem(System.Object,Microsoft.Office.Interop.Outlook.OlFormRegionMode,Microsoft.Office.Interop.Outlook.OlFormRegionSize)">
+      <summary>返回一个值，该值指示是否应为指定的 Microsoft Office Outlook 项显示窗体区域。</summary>
+      <returns>一个 <see cref="T:System.Boolean" />，它指示是否应为指定的 Outlook 项显示窗体区域。</returns>
+      <param name="outlookItem">导致窗体区域加载的 Outlook 项。</param>
+      <param name="formRegionMode">导致窗体区域加载的 Outlook 项的模式。此模式由 <see cref="T:Microsoft.Office.Interop.Outlook.OlFormRegionMode" /> 枚举表示。</param>
+      <param name="formRegionSize">正在加载的窗体区域的类型。此模式由 <see cref="T:Microsoft.Office.Interop.Outlook.OlFormRegionSize" /> 枚举表示。</param>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.IFormRegionFactory.Kind">
+      <summary>获取工厂创建的窗体区域的类型。</summary>
+      <returns>一个字符串，表示工厂创建的窗体区域的类型。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.IFormRegionFactory.Manifest">
+      <summary>获取一组属性的集合，这些属性描述窗体区域在 Microsoft Office Outlook 中的显示方式。</summary>
+      <returns>一个表示属性集合的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" />，这些属性描述窗体区域在 Outlook 中的显示方式。</returns>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.IImportedFormRegionExtension">
+      <summary>表示 <see cref="T:Microsoft.Office.Tools.Outlook.ImportedFormRegion" /> 对象的一个扩展。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.IImportedFormRegionExtension.InitializeControls">
+      <summary>初始化窗体区域中的控件。</summary>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.ImportedFormRegion">
+      <summary>表示基于 Outlook 窗体存储 (*.ofs) 文件的 Microsoft Office Outlook 窗体区域。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.ImportedFormRegion.DefaultExtension">
+      <summary>获取此 <see cref="T:Microsoft.Office.Tools.Outlook.ImportedFormRegion" /> 对象的默认扩展。</summary>
+      <returns>此 <see cref="T:Microsoft.Office.Tools.Outlook.ImportedFormRegion" /> 对象的默认扩展。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.ImportedFormRegion.Extension">
+      <summary>获取此 <see cref="T:Microsoft.Office.Tools.Outlook.ImportedFormRegion" /> 对象的自定义扩展。</summary>
+      <returns>此 <see cref="T:Microsoft.Office.Tools.Outlook.ImportedFormRegion" /> 对象的自定义扩展。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.ImportedFormRegion.Factory">
+      <summary>获取或设置与此 <see cref="T:Microsoft.Office.Tools.Outlook.ImportedFormRegion" /> 关联的窗体区域工厂。</summary>
+      <returns>实现 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegionFactory" /> 接口的对象。</returns>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Outlook.ImportedFormRegion.FormRegionClosed">
+      <summary>在窗体区域关闭前发生。</summary>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Outlook.ImportedFormRegion.FormRegionShowing">
+      <summary>在创建窗体区域的实例后但在窗体区域显示前发生。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.ImportedFormRegion.GetFormRegionControl(System.String)">
+      <summary>从窗体区域的 Microsoft.Vbe.Interop.Forms.UserForm 返回指定控件。</summary>
+      <returns>
+        <paramref name="identifier" /> 指定的控件。</returns>
+      <param name="identifier">要在窗体区域的Microsoft.Vbe.Interop.Forms.UserForm 中查找的控件的名称。</param>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.ImportedFormRegion.OutlookFormRegion" /> 属性所指定的窗体区域为 null。</exception>
+      <exception cref="T:Microsoft.Office.Tools.Outlook.ControlNotFoundException">标识符与 .ofs 文件中的控件不匹配。</exception>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.ImportedFormRegion.OutlookFormRegion">
+      <summary>获取或设置本机窗体区域对象。</summary>
+      <returns>一个表示窗体区域的 <see cref="T:Microsoft.Office.Interop.Outlook.FormRegion" />。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.ImportedFormRegion.OutlookItem">
+      <summary>获取为其显示窗体区域的 Microsoft Office Outlook 项。</summary>
+      <returns>一个 <see cref="T:System.Object" />，表示为其显示窗体区域的 Outlook 项。</returns>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.OutlookAddIn">
+      <summary>定义您使用 Visual Studio 中的 Office 开发工具创建的 Outlook 外接程序的核心功能。</summary>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Outlook.OutlookAddIn.FormRegionFactoryResolve">
+      <summary>在加载外接程序时，以及在注册表中指定的窗体区域名与在外接程序中定义的任何窗体区域名不匹配时发生。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.OutlookAddIn.GetFormRegions"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.OutlookAddIn.GetFormRegions(Microsoft.Office.Interop.Outlook.Explorer,System.Type)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.OutlookAddIn.GetFormRegions(Microsoft.Office.Interop.Outlook.Inspector,System.Type)"></member>
+  </members>
+</doc>

@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.Tools.Applications.ServerDocument</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Office.Tools.OfficeXpsDocumentException">
+      <summary>The exception that is thrown when the Visual Studio Tools for Office runtime cannot perform an operation on an Office Open XML Formats document because the format of the document is invalid.</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.OfficeXpsDocumentException.#ctor"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeXpsDocumentException.#ctor(System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeXpsDocumentException.#ctor(System.String,System.Exception)"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedData">
+      <summary>Contains all of the data that is cached in the data island of a document-level customization.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedData.Clear">
+      <summary>Removes the cached data from the document of an Office solution and removes the description of the cached data from the cached data manifest.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedData.ClearData">
+      <summary>Removes the cached data from the document of an Office solution.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedData.FromXml(System.String)">
+      <summary>Reconstructs the cached data in the Office solution from an XML string.</summary>
+      <param name="cachedDataManifest">The XML string to use to reconstruct the cached data in the Office solution.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="cachedDataManifest" /> is null or an empty string.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedData.HostItems">
+      <summary>Gets the collection of <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> objects that are in the data cache.</summary>
+      <returns>A <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection" /> that contains the data in the data cache.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedData.ToXml">
+      <summary>Returns the serialized XML representation of the data that is cached in a document of an Office solution.</summary>
+      <returns>A string that contains the serialized XML representation of the data that is cached in a document of an Office solution.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem">
+      <summary>Contains all of the cached data objects that are declared in a single class in a document-level customization that was created by using the Office development tools in Visual Studio.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem.CachedData">
+      <summary>Gets the collection of cached data objects that are declared in a single class in an Office solution.</summary>
+      <returns>A <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection" /> that contains the cached data objects that are declared in a single class in an Office solution.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem.Id">
+      <summary>Gets or sets the namespace and class in which the cached data objects in the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> are declared.</summary>
+      <returns>The namespace and class in which the cached data objects in the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> are declared.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection">
+      <summary>Represents a collection of <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> objects in the data cache of a document-level customization that was created by using the Office development tools in Visual Studio.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection.Add(System.String)">
+      <summary>Adds the specified <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> to the end of the collection.</summary>
+      <returns>The <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> that was added to the end of the collection.</returns>
+      <param name="hostItemId">The namespace and class in which the source data is cached.</param>
+      <exception cref="T:System.InvalidOperationException">A <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> that corresponds to <paramref name="hostItemId" /> already exists in the collection.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection.Contains(System.String)">
+      <summary>Returns a value that indicates whether the collection contains the specified <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />.</summary>
+      <returns>true if the collection contains a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> that corresponds to the <paramref name="hostItemId" /> parameter; otherwise, false.</returns>
+      <param name="hostItemId">The namespace and class in which the source data is cached.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection.GetEnumerator">
+      <summary>Returns a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator" /> that can be used to iterate through the contents of the collection.</summary>
+      <returns>A <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator" /> that can be used to iterate through the contents of the collection.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection.Item(System.String)">
+      <summary>Gets the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> identified by the namespace and class in which the source data is cached.</summary>
+      <returns>The <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> that corresponds to the <paramref name="hostItemId" /> parameter; null if no <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> that corresponds to <paramref name="hostItemId" /> was found.</returns>
+      <param name="hostItemId">The namespace and class in which the source data is cached.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection.Remove(System.String)">
+      <summary>Removes the specified <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />, identified by the namespace and class name in which the source data is cached, from the collection.</summary>
+      <param name="hostItemId">The namespace and class name in which the source data is cached.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator">
+      <summary>Iterates through a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection" />.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current">
+      <summary>Gets the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> at the current position of the enumerator.</summary>
+      <returns>The <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> at the current position of the enumerator.</returns>
+      <exception cref="T:System.InvalidOperationException">The enumerator is positioned before the first element of the collection or after the last element.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext">
+      <summary>Advances the enumerator to the next <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> in the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection" />.</summary>
+      <returns>true if the enumerator was successfully advanced to the next <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />; false if the enumerator has passed the end of the collection.</returns>
+      <exception cref="T:System.InvalidOperationException">The collection was modified after the enumerator was created.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset">
+      <summary>Sets the enumerator to its initial position, which is before the first <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> in the collection.</summary>
+      <exception cref="T:System.InvalidOperationException">The collection was modified after the enumerator was created.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System#Collections#IEnumerator#Current">
+      <summary>For a description of this member, see <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current" />.</summary>
+      <returns>This member is an explicit interface member implementation. It can be used only when the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator" /> instance is cast to an <see cref="T:System.Collections.IEnumerator" /> interface.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System#IDisposable#Dispose">
+      <summary>Releases all resources used by the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator" />. </summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem">
+      <summary>Represents a cached data object in a document-level customization that was created by using the Office development tools in Visual Studio.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.DataType">
+      <summary>Gets or sets the assembly-qualified name of the type of the cached data object.</summary>
+      <returns>The assembly-qualified name of the type of the cached data object.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Id">
+      <summary>Gets or sets the name of the cached data object that is represented by the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />.</summary>
+      <returns>The name of the cached data object that is represented by the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Schema">
+      <summary>Gets or sets a schema that describes the cached data object that is represented by the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />, if the cached data object is a <see cref="T:System.Data.DataSet" /> or <see cref="T:System.Data.DataTable" />.</summary>
+      <returns>If the cached data object is a <see cref="T:System.Data.DataSet" /> or <see cref="T:System.Data.DataTable" />, this property returns a schema that describes the cached data object; otherwise, null.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance(System.Object)">
+      <summary>Serializes data to the cached data object that is represented by the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />.</summary>
+      <param name="value">The object that contains the data you want to save to an object in the data cache.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml">
+      <summary>Gets or sets the XML representation of the cached data object that is represented by the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />.</summary>
+      <returns>The XML representation of the cached data object that is represented by the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection">
+      <summary>Represents a collection of <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> objects in a document-level customization that was created by using the Office development tools in Visual Studio.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection.Add(System.String,System.String)">
+      <summary>Adds the specified <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> to the end of the collection.</summary>
+      <returns>The <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> that was added to the end of the collection.</returns>
+      <param name="dataId">The name of the object to add to the data cache.</param>
+      <param name="dataType">The full assembly-qualified name of the type of the object to add to the data cache.</param>
+      <exception cref="T:System.InvalidOperationException">A <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> that corresponds to <paramref name="dataId" /> already exists in the collection.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection.Contains(System.String)">
+      <summary>Returns a value that indicates whether the collection contains the specified <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />.</summary>
+      <returns>true if the collection contains a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> that corresponds to the <paramref name="dataId" /> parameter; otherwise, false.</returns>
+      <param name="dataId">The name of the cached data object.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection.GetEnumerator">
+      <summary>Returns a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator" /> that can be used to iterate through the contents of the collection.</summary>
+      <returns>A <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator" /> that can be used to iterate through the contents of the collection.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection.Item(System.String)">
+      <summary>Gets the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> identified by the name of the cached data object.</summary>
+      <returns>The <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> that corresponds to the <paramref name="dataID" /> parameter; null if no <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> that corresponds to <paramref name="dataID" /> was found.</returns>
+      <param name="dataId">The name of the cached data object.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection.Remove(System.String)">
+      <summary>Removes the specified <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />, identified by the name of the cached data object, from the collection.</summary>
+      <param name="dataId">The name of the cached data object.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator">
+      <summary>Iterates through a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection" />.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator.Current">
+      <summary>Gets the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> at the current position of the enumerator.</summary>
+      <returns>The <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> at the current position of the enumerator.</returns>
+      <exception cref="T:System.InvalidOperationException">The enumerator is positioned before the first element of the collection or after the last element.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator.MoveNext">
+      <summary>Advances the enumerator to the next <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> in the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection" />.</summary>
+      <returns>true if the enumerator was successfully advanced to the next <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />; false if the enumerator has passed the end of the collection.</returns>
+      <exception cref="T:System.InvalidOperationException">The collection was modified after the enumerator was created.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator.Reset">
+      <summary>Sets the enumerator to its initial position, which is before the first <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> in the collection.</summary>
+      <exception cref="T:System.InvalidOperationException">The collection was modified after the enumerator was created.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator.System#Collections#IEnumerator#Current">
+      <summary>For a description of this member, see <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator.Current" />.</summary>
+      <returns>This member is an explicit interface member implementation. It can be used only when the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator" /> instance is cast to an <see cref="T:System.Collections.IEnumerator" /> interface.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator.System#IDisposable#Dispose">
+      <summary>Releases all resources used by the <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator" />. </summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataNodeBase">
+      <summary>Provides the base class for cached data classes used in document-level customizations created by using the Office development tools in Visual Studio.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataNodeBase.#ctor"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument">
+      <summary>Provides access to the cached data and customization information in a document or workbook that is part of a document-level customization created by using the Office development tools in Visual Studio.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.#ctor(System.Byte[],System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> class using a byte array that represents the document to be loaded and the file name extension of the document.</summary>
+      <param name="bytes">A byte array that represents the document to be loaded.</param>
+      <param name="fileType">The file name extension of the document that is stored in the <paramref name="bytes" /> parameter, preceded by a period (.)—for example, ".xlsx" or ".docx".</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="bytes" /> parameter is null or empty.-or-The <paramref name="fileType" /> parameter is null or empty or consists entirely of white space characters.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException">The <paramref name="fileType" /> parameter specifies a file name extension that is not supported by the Visual Studio Tools for Office runtime.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">The file specified by <paramref name="documentPath" /> has a customization that was not created with the Visual Studio 2010 Tools for Office Runtime or the Visual Studio Tools for the Microsoft Office system (version 3.0 Runtime).</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.#ctor(System.IO.Stream,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> class using a stream that represents the document to be loaded and the file name extension of the document.</summary>
+      <param name="stream">A stream that represents the document to be loaded.</param>
+      <param name="fileType">The file name extension of the document that is stored in the <paramref name="bytes" /> parameter, preceded by a period (.)—for example, ".xlsx" or ".docx".</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="stream" /> parameter is null or empty.-or-The <paramref name="fileType" /> parameter is null or empty or consists entirely of white space characters.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="stream" /> parameter has zero length or its current position is at the stream's end.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException">The <paramref name="fileType" /> parameter specifies a file name extension that is not supported by the Visual Studio Tools for Office runtime.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">The file specified by <paramref name="documentPath" /> has a customization that was not created with the Visual Studio 2010 Tools for Office Runtime or the Visual Studio Tools for the Microsoft Office system (version 3.0 Runtime).</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> class using the full path of the document to be loaded.</summary>
+      <param name="documentPath">The full path of the document to be loaded.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="documentPath" /> parameter is null or empty or consists entirely of white space characters.</exception>
+      <exception cref="T:System.IO.FileNotFoundException">The file specified by <paramref name="documentPath" /> does not exist.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">The file specified by <paramref name="documentPath" /> has a customization that was not created with the Visual Studio 2010 Tools for Office Runtime or the Visual Studio Tools for the Microsoft Office system (version 3.0 Runtime).</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException">The file specified by <paramref name="documentPath" /> has a file name extension that is not supported by the Visual Studio Tools for Office runtime.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.#ctor(System.String,System.IO.FileAccess)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> class using the full path of the document to be loaded and a value that indicates the file access for the document.</summary>
+      <param name="documentPath">The full path of the document to be loaded.</param>
+      <param name="access">A value that indicates the file access for the document.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="documentPath" /> parameter is null or empty or consists entirely of white space characters.</exception>
+      <exception cref="T:System.ArgumentException">The value of <paramref name="access" /> is System.IO.FileAccess.Write.</exception>
+      <exception cref="T:System.IO.FileNotFoundException">The file specified by <paramref name="documentPath" /> does not exist.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotCustomizedException">The file specified by the <paramref name="documentPath" /> parameter does not have a customization, and the value of <paramref name="access" /> is System.IO.FileAccess.Read.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">The file specified by <paramref name="documentPath" /> has a customization that was not created with the Visual Studio 2010 Tools for Office Runtime or the Visual Studio Tools for the Microsoft Office system (version 3.0 Runtime).</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException">The file specified by <paramref name="documentPath" /> has a file name extension that is not supported by the Visual Studio Tools for Office runtime.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization(System.String,System.String,System.Guid,System.Uri)">
+      <summary>Attaches a customization to the specified document by using the specified document, assembly name, solution ID, and deployment manifest.</summary>
+      <param name="documentPath">The full path of the document to which you want to attach a customization.</param>
+      <param name="assemblyName">The full path of the assembly for the customization. The path must be on the local file system or a UNC share; you cannot specify an HTTP location.</param>
+      <param name="solutionId">A GUID that the Visual Studio Tools for Office runtime uses to identify the solution.</param>
+      <param name="deploymentManifestUrl">The URL of the deployment manifest for the solution.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="documentPath" /> or <paramref name="assemblyName" /> is null or empty.</exception>
+      <exception cref="T:System.IO.FileNotFoundException">
+        <paramref name="documentPath" /> or <paramref name="assemblyName" /> refers to a file that does not exist.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyCustomizedException">The document specified by <paramref name="documentPath" /> already has a customization.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotCustomizedException">The document specified by <paramref name="documentPath" /> is corrupt, or has restricted permissions.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException">The document specified by <paramref name="documentPath" /> has a file name extension that is not supported by the Visual Studio Tools for Office runtime.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization(System.String,System.String,System.Guid,System.Uri,System.Boolean,System.String[]@)"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization(System.String,System.Uri)">
+      <summary>Attaches a customization to the specified document by using the specified assembly name and deployment manifest.</summary>
+      <param name="documentPath">The full path of the document to which you want to attach a customization.</param>
+      <param name="deploymentManifestUrl">The URL of the deployment manifest for the solution.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="documentPath" /> or <paramref name="deploymentManifestUrl" /> is null or empty.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="deploymentManifestUrl" /> does not specify an absolute URL.</exception>
+      <exception cref="T:System.IO.FileNotFoundException">
+        <paramref name="documentPath" /> or <paramref name="deploymentManifestUrl" /> refers to a file that does not exist.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyCustomizedException">The document specified by <paramref name="documentPath" /> already has a customization.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidManifestException">The deployment manifest specified by <paramref name="deploymentManifestUrl" /> is not a valid deployment manifest.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotCustomizedException">The document specified by <paramref name="documentPath" /> is corrupt, or has restricted permissions.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException">The document specified by <paramref name="documentPath" /> has a file name extension that is not supported by the Visual Studio Tools for Office runtime.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData">
+      <summary>Gets a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedData" /> object that represents the cached data that is contained in the document.</summary>
+      <returns>The cached data that is contained in the document.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Close">
+      <summary>Closes the <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> object.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.ServerDocument.DeploymentManifestUrl">
+      <summary>Gets or sets the URL of the deployment manifest for the customization that is associated with the document.</summary>
+      <returns>A URL that specifies the name and location of the deployment manifest for the customization that is associated with the document.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Document">
+      <summary>Gets the byte array of an in-memory document that is loaded into the <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" />.</summary>
+      <returns>The byte array of an in-memory document that is loaded into the <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" />.</returns>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentClosedException">The document has been closed.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.GetCustomizationVersion(System.String)">
+      <summary>Returns the version of the Visual Studio Tools for Office runtime that was used to create the customization that is associated with the specified document.</summary>
+      <returns>A number that specifies the version of the Visual Studio Tools for Office runtime that was used to create the associated customization.</returns>
+      <param name="documentPath">The full path of the document that you want to check.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="documentPath" /> parameter is null or empty or consists entirely of white space characters.</exception>
+      <exception cref="T:System.IO.FileNotFoundException">The file specified by <paramref name="documentPath" /> does not exist.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException">The file specified by <paramref name="documentPath" /> has a file name extension that is not supported by the Visual Studio Tools for Office runtime.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.IsCacheEnabled(System.String)">
+      <summary>Gets a value that indicates whether the specified document has a data cache.</summary>
+      <returns>true if the specified document has a data cache; otherwise, false.</returns>
+      <param name="documentPath">The full path of the document that you want to check.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="documentPath" /> parameter is null or empty or consists entirely of white space characters.</exception>
+      <exception cref="T:System.IO.FileNotFoundException">The file specified by <paramref name="documentPath" /> does not exist.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">The file specified by <paramref name="documentPath" /> has a customization that was not created with the Visual Studio 2010 Tools for Office Runtime or the Visual Studio Tools for the Microsoft Office system (version 3.0 Runtime).</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.IsCustomized(System.String)">
+      <summary>Gets a value that indicates whether the specified document has a customization that was created by using the Visual Studio 2010 Tools for Office Runtime.</summary>
+      <returns>true if the document has a customization that was created by using the Visual Studio 2010 Tools for Office Runtime; false if the document does not have a customization.</returns>
+      <param name="documentPath">The full path of the document that you want to check for a customization.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="documentPath" /> parameter is null or empty or consists entirely of white space characters.</exception>
+      <exception cref="T:System.IO.FileNotFoundException">The file in <paramref name="documentPath" /> does not exist.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">The file specified by <paramref name="documentPath" /> has a customization that was not created with the Visual Studio 2010 Tools for Office Runtime or the Visual Studio Tools for the Microsoft Office system (version 3.0 Runtime).</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization(System.String)">
+      <summary>Removes the customization from the document.</summary>
+      <param name="documentPath">The full path of the document from which you want to remove the customization.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="documentPath" /> parameter is null or empty or consists completely of white space characters.</exception>
+      <exception cref="T:System.IO.FileNotFoundException">The file specified by <paramref name="documentPath" /> does not exist.</exception>
+      <exception cref="T:System.IO.IOException">The file specified by <paramref name="documentPath" /> is read-only, or cannot be accessed.</exception>
+      <exception cref="T:System.InvalidOperationException">The file specified by <paramref name="documentPath" /> does not have a customization, or an error occurred while loading the manifest.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">The file specified by <paramref name="documentPath" /> has a customization that was not created with the Visual Studio 2010 Tools for Office Runtime or the Visual Studio Tools for the Microsoft Office system (version 3.0 Runtime).</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save">
+      <summary>Saves any changes that were made to the document by using the <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> class.</summary>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentClosedException">The <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> has been closed.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingHostItemIdException">The <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem.Id" /> property of a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> is null or empty.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingDataIdException">The <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Id" /> property of a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> is null or empty.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingTypeException">The <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.DataType" /> property of a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> is null or empty.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.ServerDocument.SolutionId">
+      <summary>Gets a GUID that the Visual Studio Tools for Office runtime uses to identify the solution.</summary>
+      <returns>A GUID that the Visual Studio Tools for Office runtime uses to identify the solution.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.System#IDisposable#Dispose">
+      <summary>Releases all resources used by the <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" />. </summary>
+    </member>
+  </members>
+</doc>

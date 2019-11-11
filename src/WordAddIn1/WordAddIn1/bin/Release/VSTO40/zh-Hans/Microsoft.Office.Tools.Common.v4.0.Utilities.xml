@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Office.Tools.Common.v4.0.Utilities</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Office.Tools.AddInBase">
+      <summary>在您使用 Visual Studio 创建的应用程序级外接程序中为 ThisAddIn 类提供基类。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.#ctor(Microsoft.Office.Tools.Factory,System.IServiceProvider,System.String,System.String)"></member>
+    <member name="P:Microsoft.Office.Tools.AddInBase.Base">
+      <summary>获取此 <see cref="T:Microsoft.Office.Tools.AddInBase" /> 对象扩展的 <see cref="T:Microsoft.Office.Tools.AddIn" /> 对象。</summary>
+      <returns>此 <see cref="T:Microsoft.Office.Tools.AddInBase" /> 对象扩展的对象。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.BeginInit"></member>
+    <member name="P:Microsoft.Office.Tools.AddInBase.BindingContext"></member>
+    <member name="E:Microsoft.Office.Tools.AddInBase.BindingContextChanged"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject">
+      <summary>返回实现 Microsoft.Office.Core.IRibbonExtensibility 接口的对象。</summary>
+      <returns>一个实现 Microsoft.Office.Core.IRibbonExtensibility 接口的对象。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.CreateRibbonObjects">
+      <summary>将 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象的数组返回给 <see cref="M:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject" /> 方法。</summary>
+      <returns>
+        <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象的数组。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.AddInBase.DataBindings"></member>
+    <member name="P:Microsoft.Office.Tools.AddInBase.DataHost"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Dispose">
+      <summary>释放由 <see cref="T:Microsoft.Office.Tools.AddInBase" /> 占用的资源。</summary>
+    </member>
+    <member name="E:Microsoft.Office.Tools.AddInBase.Disposed"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.EndInit"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.FinishInitialization"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.GetHostItem``1(System.Type,System.String)">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="P:Microsoft.Office.Tools.AddInBase.HostContext"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Initialize"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.InitializeDataBindings"></member>
+    <member name="P:Microsoft.Office.Tools.AddInBase.ItemProvider"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#BeginInit"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#EndInit"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#FinishInitialization"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#Initialize"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#InitializeDataBindings"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#OnShutdown"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#OnStartup"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#IAddInExtension#CreateRibbonExtensibilityObject"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#IAddInExtension#CreateRibbonObjects"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#IAddInExtension#RequestComAddInAutomationService"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#IAddInExtension#RequestService(System.Guid)"></member>
+    <member name="P:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#IExtension#ExtensionBase"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.OnShutdown"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.OnStartup"></member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService">
+      <summary>返回您的外接程序中可以供其他解决方案使用的对象。</summary>
+      <returns>要向其他解决方案公开的对象。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.AddInBase.RequestService(System.Guid)">
+      <summary>返回一个扩展 Microsoft Office 应用程序中的某项功能的对象。</summary>
+      <returns>一个实现由 <paramref name="serviceGuid" /> 标识的扩展接口的对象。</returns>
+      <param name="serviceGuid">一个标识 Microsoft Office 应用程序支持的扩展接口的 <see cref="T:System.Guid" />。</param>
+    </member>
+    <member name="E:Microsoft.Office.Tools.AddInBase.Shutdown">
+      <summary>当外接程序即将卸载时发生。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.AddInBase.Site"></member>
+    <member name="E:Microsoft.Office.Tools.AddInBase.Startup">
+      <summary>在加载外接程序、且程序集中的所有初始化代码都已运行时发生。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.AddInBase.Tag"></member>
+    <member name="T:Microsoft.Office.Tools.DesignTimeConstants"></member>
+    <member name="F:Microsoft.Office.Tools.DesignTimeConstants.DesignerAssembly"></member>
+    <member name="F:Microsoft.Office.Tools.DesignTimeConstants.FormRegionTypeCodeDomSerializer"></member>
+    <member name="F:Microsoft.Office.Tools.DesignTimeConstants.RibbonTypeSerializer"></member>
+    <member name="F:Microsoft.Office.Tools.DesignTimeConstants.TypeCodeDomSerializer"></member>
+    <member name="F:Microsoft.Office.Tools.DesignTimeConstants.Version"></member>
+    <member name="T:Microsoft.Office.Tools.Ribbon.RibbonBase">
+      <summary>作为 Microsoft Office 功能区自定义项的基类。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonBase.#ctor(Microsoft.Office.Tools.Ribbon.RibbonFactory)">
+      <summary>初始化 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Base">
+      <summary>获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 对象扩展的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 对象。</summary>
+      <returns>此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 对象扩展的对象。</returns>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Ribbon.RibbonBase.Close">
+      <summary>关闭此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 实例时发生。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Context">
+      <summary>获取 Outlook 中与此功能区关联的检查器窗口或资源管理器窗口。</summary>
+      <returns>一个 <see cref="T:System.Object" />，表示与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 对象关联的检查器窗口或资源管理器窗口。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonBase.Dispose(System.Boolean)">
+      <summary>释放由 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 类占用的非托管资源，还可以选择释放托管资源。</summary>
+      <param name="disposing">如果为 true，则释放托管资源和非托管资源；如果为 false，则仅释放非托管资源。</param>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Factory">
+      <summary>获取或设置与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 关联的功能区工厂。</summary>
+      <returns>实现 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonFactory" /> 接口的对象。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Global">
+      <summary>获取或设置一个值，该值确定此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 是否可以同时在多个上下文中使用。</summary>
+      <returns>如果此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 对象在多个上下文中共享，则为 true；否则为 false。默认值为 true。</returns>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Ribbon.RibbonBase.Load">
+      <summary>当 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 加载到 Microsoft Office 应用程序时发生。</summary>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage">
+      <summary>如果为一个或多个控件设置 ImageName 属性，则在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 加载时发生。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Microsoft#Office#Tools#IExtension#ExtensionBase"></member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Name">
+      <summary>获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 的名称。</summary>
+      <returns>一个字符串，包含此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 的名称。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.OfficeMenu">
+      <summary>获取一个表示 Microsoft Office 菜单自定义项的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />。</summary>
+      <returns>一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />，表示 Microsoft Office 菜单自定义项。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Parent">
+      <summary>获取一个表示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> 的父级的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" />。</summary>
+      <returns>一个表示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> 的父级的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" />。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonBase.PerformDynamicLayout">
+      <summary>如果 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> 有一个动态父级（如动态菜单）且布局未挂起，则调用父控件的 Microsoft.Office.Core.IRibbonUI.InvalidateControl 方法。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonBase.PerformLayout">
+      <summary>刷新功能区用户界面。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonBase.ResumeLayout">
+      <summary>取消 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout" /> 方法的效果。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonBase.ResumeLayout(System.Boolean)">
+      <summary>取消 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout" /> 方法的效果。</summary>
+      <param name="performLayout">如果为 true，则调用 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonBase.PerformLayout" /> 方法。如果为 false，则启用 UI 刷新而不调用 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonBase.PerformLayout" />。</param>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonId">
+      <summary>获取用于创建 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 类的此实例的功能区 ID。</summary>
+      <returns>用于创建 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 类的此实例的功能区 ID。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonType">
+      <summary>获取功能区 ID 的逗号分隔的列表，这些功能区 ID 与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 实例相关联。</summary>
+      <returns>功能区 ID 的逗号分隔的列表，这些功能区 ID 与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 实例相关联。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonUI">
+      <summary>获取 Microsoft Office 应用程序提供给功能区扩展性代码的 IRibbonUI 实例。</summary>
+      <returns>由 Office 应用程序提供给功能区扩展性代码的 IRibbonUI 实例。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.StartFromScratch">
+      <summary>获取或设置一个值，该值指示是否隐藏功能区上的所有内置选项卡和 Microsoft Office 菜单上的大部分命令，并仅显示在此功能区项中定义的自定义项。</summary>
+      <returns>如果功能区仅显示在此功能区项中定义的自定义项，则为 true；否则为 false。默认值为 false。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout">
+      <summary>阻止 Microsoft Office 应用程序刷新功能区上的控件的状态。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Tabs">
+      <summary>获取 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> 中 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> 对象的集合。</summary>
+      <returns>
+        <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> 中 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> 对象的集合。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Tag">
+      <summary>获取或设置与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 关联的特定于应用程序的数据。</summary>
+      <returns>一个 System.Object，表示与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 关联的特定于应用程序的数据。</returns>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase">
+      <summary>提供对功能区自定义项中的 <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> 对象的访问。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.#ctor(Microsoft.Office.Tools.Ribbon.RibbonFactory)"></member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.Base">
+      <summary>获取 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase" /> 中的 <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> 对象的 <see cref="T:System.Collections.Generic.IList`1" />。</summary>
+      <returns>一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase" /> 中的 <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> 对象的 <see cref="T:System.Collections.Generic.IList`1" />。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.GetRibbon``1">
+      <typeparam name="TRibbon"></typeparam>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.GetRibbon(System.Type)"></member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.GetRibbonContextCollection``1(System.Object)">
+      <typeparam name="TRibbonCollection"></typeparam>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.GetRibbonContextCollection(System.Object,System.Type)"></member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.Microsoft#Office#Tools#IExtension#ExtensionBase"></member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection{T}#Add(Microsoft.Office.Tools.Ribbon.IRibbonExtension)"></member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection{T}#Clear"></member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection{T}#Contains(Microsoft.Office.Tools.Ribbon.IRibbonExtension)"></member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection{T}#CopyTo(Microsoft.Office.Tools.Ribbon.IRibbonExtension[],System.Int32)"></member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection{T}#Count"></member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection{T}#IsReadOnly"></member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection{T}#Remove(Microsoft.Office.Tools.Ribbon.IRibbonExtension)"></member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#IEnumerable{T}#GetEnumerator"></member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#IList{T}#IndexOf(Microsoft.Office.Tools.Ribbon.IRibbonExtension)"></member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#IList{T}#Insert(System.Int32,Microsoft.Office.Tools.Ribbon.IRibbonExtension)"></member>
+    <member name="P:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#IList{T}#Item(System.Int32)"></member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#IList{T}#RemoveAt(System.Int32)"></member>
+    <member name="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#IEnumerable#GetEnumerator"></member>
+  </members>
+</doc>

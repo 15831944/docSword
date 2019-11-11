@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="gb2312"?>
+<AutoUpdater>
+  <AppName>AutoUpdate</AppName>
+  <ReleaseURL>http://10.115.246.123:30000</ReleaseURL>
+  <ReleaseDate>2019/11/11 11:02:16</ReleaseDate>
+  <ReleaseVersion>2.18.0926</ReleaseVersion>
+  <MinVersion>1.0.0.0</MinVersion>
+  <IsNecessary>false</IsNecessary>
+  <UpdateDes>
+  </UpdateDes>
+  <ApplicationStart>
+  </ApplicationStart>
+  <ShortcutIcon>
+  </ShortcutIcon>
+  <UpdateFile>
+  </UpdateFile>
+</AutoUpdater>

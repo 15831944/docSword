@@ -1,0 +1,45 @@
+﻿<?xml version="1.0"  encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="docSword" namespace="OfficeAssist.localDB.Model">
+  <class name="OfficeAssist.localDB.Model.tblHeadingStyleParagraphFormat,docSword" table="tblHeadingStyleParagraphFormat">
+    <id name="ID" column="ID" type="guid">
+
+    </id>
+    <property name="schemeName" column="schemeName" type="string"  />
+    <property name="AddSpaceBetweenFarEastAndAlpha" column="AddSpaceBetweenFarEastAndAlpha" type="int"  />
+    <property name="AddSpaceBetweenFarEastAndDigit" column="AddSpaceBetweenFarEastAndDigit" type="int"  />
+    <property name="Alignment" column="Alignment" type="int"  />
+    <property name="AutoAdjustRightIndent" column="AutoAdjustRightIndent" type="int"  />
+    <property name="BaseLineAlignment" column="BaseLineAlignment" type="int"  />
+    <property name="CharacterUnitFirstLineIndent" column="CharacterUnitFirstLineIndent" type="float"  />
+    <property name="CharacterUnitLeftIndent" column="CharacterUnitLeftIndent" type="float"  />
+    <property name="CharacterUnitRightIndent" column="CharacterUnitRightIndent" type="float"  />
+    <property name="DisableLineHeightGrid" column="DisableLineHeightGrid" type="int"  />
+    <property name="FarEastLineBreakControl" column="FarEastLineBreakControl" type="int"  />
+    <property name="FirstLineIndent" column="FirstLineIndent" type="float"  />
+    <property name="HalfWidthPunctuationOnTopOfLine" column="HalfWidthPunctuationOnTopOfLine" type="int"  />
+    <property name="HangingPunctuation" column="HangingPunctuation" type="int"  />
+    <property name="Hyphenation" column="Hyphenation" type="int"  />
+    <property name="KeepTogether" column="KeepTogether" type="int"  />
+    <property name="KeepWithNext" column="KeepWithNext" type="int"  />
+    <property name="LeftIndent" column="LeftIndent" type="float"  />
+    <property name="LineSpacing" column="LineSpacing" type="float"  />
+    <property name="LineSpacingRule" column="LineSpacingRule" type="int"  />
+    <property name="LineUnitAfter" column="LineUnitAfter" type="float"  />
+    <property name="LineUnitBefore" column="LineUnitBefore" type="float"  />
+    <property name="MirrorIndents" column="MirrorIndents" type="int"  />
+    <property name="NoLineNumber" column="NoLineNumber" type="int"  />
+    <property name="OutlineLevel" column="OutlineLevel" type="int"  />
+    <property name="PageBreakBefore" column="PageBreakBefore" type="int"  />
+    <property name="ReadingOrder" column="ReadingOrder" type="int"  />
+    <property name="RightIndent" column="RightIndent" type="float"  />
+    <property name="SpaceAfter" column="SpaceAfter" type="float"  />
+    <property name="SpaceAfterAuto" column="SpaceAfterAuto" type="int"  />
+    <property name="SpaceBefore" column="SpaceBefore" type="float"  />
+    <property name="SpaceBeforeAuto" column="SpaceBeforeAuto" type="int"  />
+    <property name="TextboxTightWrap" column="TextboxTightWrap" type="int"  />
+    <property name="WidowControl" column="WidowControl" type="int"  />
+    <property name="WordWrap" column="WordWrap" type="int"  />
+
+  </class>
+</hibernate-mapping>
+

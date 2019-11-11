@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI onLoad="Ribbon_Load" xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+    <ribbon>
+        <tabs>
+            <tab idMso="TabAddIns" label="doc利器">
+                <group id="grpConfig" label="文库">
+                    <button id="btnLogin" onAction="btnLogin_Click" screentip="登录/注销文库系统" supertip="若存在文库系统，此功能实现登录/注销文库系统功能" label="登录" />
+                    <checkBox id="chkAutoLogin" onAction="chkAutoLogin_Click" screentip="自动登录文库系统" supertip="若前次成功登录文库系统，勾选后，则下次即自动登录文库系统" label="自动" />
+                </group>
+                <group id="grpComOp" label="常用">
+                    <box id="box8">
+                        <button id="btnAddHeaderLine" onAction="btnAddHeaderLine_Click" screentip="设置当前节页眉线" label="设置页眉线" />
+                        <button id="btnRemoveHeaderLine" onAction="btnRemoveHeaderLine_Click" screentip="清除当前节页眉线" label="清除页眉线" />
+                    </box>
+                    <box id="box9">
+                        <button id="btnAddFooterLine" onAction="btnAddFooterLine_Click" screentip="设置当前节页脚线" label="设置页脚线" />
+                        <button id="btnClearFooterLine" onAction="btnClearFooterLine_Click" screentip="清除当前节页脚线" label="清除页脚线" />
+                    </box>
+                    <button id="btnRibInsertSeparateTblContent" onAction="btnRibInsertSeparateTblContent_Click" screentip="在当前位置插入独立目录节" supertip="在当前位置插入独立目录节，插入的目录节将原文分为3个独立节，之前部分即第1节为封面，插入部分即第2节为目录节，插入位置之后即第3节为正文节" label="插入独立目录节" />
+                    <separator id="separator3" />
+                    <button id="btnStrictCenter" onAction="btnStrictCenter_Click" screentip="整页标准居中，占整页且居于页正中" supertip="可应用于保持整页（不受上下文段落影响）标准居中的页面如封面等" description="整页标准居中" label="添加页居中" />
+                    <button id="btnCenterAllPics" onAction="btnCenterAllPics_Click" screentip="将选择范围或全文内所有的独立成行的图片居中（内嵌在文字中的图片不作处理）" label="居中图片" />
+                    <button id="btnRibCenterTables" onAction="btnRibCenterTables_Click" screentip="将选择范围或全文内所有的表格进行居中（不影响表格内部的对齐设置）" label="居中表格" />
+                    <separator id="separator7" />
+                    <button id="RibbtnOpenCurDocDir" onAction="RibbtnOpenCurDocDir_Click" screentip="打开当前已保存文档所在目录" label="打开文档目录" />
+                    <checkBox id="chkBoxUpdTblCntOnSaving" onAction="chkBoxUpdTblCntOnSaving_Click" screentip="勾选时则每次保存前更新目录，以保证目录最新" label="保存时更新目录" />
+                    <checkBox id="chkBoxUpdTblCntOnClose" onAction="chkBoxUpdTblCntOnClose_Click" screentip="勾选时则关闭前更新目录，以保证目录最新" label="关闭时更新目录" />
+                    <separator id="separator5" />
+                    <button id="ribbtnUnitedHeaders" onAction="ribbtnUnitedHeaders_Click" screentip="将当前节的页眉统一到其它选中的目标节" label="统一页眉" />
+                    <button id="ribbtnUnitedFooters" onAction="ribbtnUnitedFooters_Click" screentip="将当前节的页脚统一到其它选中的目标节" label="统一页脚" />
+                    <labelControl id="lblCurParaOutLine" label="当前段落级：" screentip="显示当前段落（若有多选则指第一个段落）的大纲级别（正表示正文，1-9表示相应大纲级别）" visible="false" />
+                    <button id="rbBtnCalculate" onAction="rbBtnCalculate_Click" supertip="计算选中的段落或表格的数值(合计、均值等基本统计）" label="计算" />
+                </group>
+                <group id="grpAutoNumbering" label="填充">
+                    <button id="ribBtnFillSn" onAction="ribBtnFillSn_Click" screentip="智能填充" supertip="若在表格中，没有选择则将当前单元格的内容按顺序填充到表末行；若选择了范围则将选择区第一段落累加填充至选择范围内的最后段落；支持日期和任意编号，序号增加以最右边的数字为基数开始" label="智能填充" />
+                    <button id="ribBtnFillSn2EndRow" onAction="ribBtnFillSn2EndRow_Click" screentip="若在表格中，则将当前单元格的内容累加填充到表末行" label="填充至表末行" />
+                    <button id="ribBtnFillSelection" onAction="ribBtnFillSelection_Click" screentip="将当前选择区第一段落内容累加填充到选择区最后一个段落" label="填充选择区" />
+                </group>
+                <group id="grpOutline" label="大纲级别">
+                    <box id="box2" boxStyle="vertical">
+                        <box id="box4">
+                            <button id="ribBtnOutLevel1" onAction="ribBtnOutLevel1_Click" label="1" showLabel="false" />
+                            <button id="ribBtnOutLevel2" onAction="ribBtnOutLevel2_Click" label="2" showLabel="false" />
+                            <button id="ribBtnOutLevel3" onAction="ribBtnOutLevel3_Click" label="3" showLabel="false" />
+                        </box>
+                        <box id="box3">
+                            <button id="ribBtnOutLevel4" onAction="ribBtnOutLevel4_Click" label="4" showLabel="false" />
+                            <button id="ribBtnOutLevel5" onAction="ribBtnOutLevel5_Click" label="5" showLabel="false" />
+                            <button id="ribBtnOutLevel6" onAction="ribBtnOutLevel6_Click" label="6" showLabel="false" />
+                        </box>
+                        <box id="box5">
+                            <button id="ribBtnOutLevel7" onAction="ribBtnOutLevel7_Click" label="7" showLabel="false" />
+                            <button id="ribBtnOutLevel8" onAction="ribBtnOutLevel8_Click" label="8" showLabel="false" />
+                            <button id="ribBtnOutLevel9" onAction="ribBtnOutLevel9_Click" label="9" showLabel="false" />
+                        </box>
+                        <button id="ribBtnOutLevelTextBody" onAction="ribBtnOutLevelTextBody_Click" label="正" showLabel="false" />
+                        <button id="ribBtnViewOutlineLevel" onAction="ribBtnViewOutlineLevel_Click" label="查" showImage="false" />
+                    </box>
+                    <separator id="separator2" />
+                    <button id="btnOutlineSamePrev" onAction="btnOutlineSamePrev_Click" screentip="设置当前选择段落大纲级别与前面最近章节同级" label="同前级" />
+                    <button id="btnOutlineLow1Prev" onAction="btnOutlineLow1Prev_Click" screentip="设置当前选择段落大纲级别为前面最近章节低一级" label="低前一级" />
+                    <button id="btnOutlineHigh1Prev" onAction="btnOutlineHigh1Prev_Click" screentip="设置当前选择段落大纲级别为前面最近章节高一级" label="高前一级" />
+                    <separator id="separator1" />
+                    <box id="box1" boxStyle="vertical">
+                        <button id="btnOutlinePromote" onAction="btnOutlinePromote_Click" screentip="设置当前选择段落大纲级别增加一级（升级）" label="批量升级" />
+                        <button id="btnOutlineDemote" onAction="btnOutlineDemote_Click" screentip="设置当前选择段落大纲级别降低一级（降级）" label="批量降级" />
+                        <checkBox id="chkOnlyNonTextBodyPara" screentip="对批量升级/降级是否排除正文（只针对章节）或包括正文" label="排除正文" />
+                    </box>
+                </group>
+                <group id="grpPane" label="章节样式">
+                    <button id="btnCopyHeadingStyles" onAction="btnCopyHeadingStyles_Click" screentip="复制选择范围内或文档章节的样式" label="复制章节样式" />
+                    <button id="btnPasteHeadingStyles" onAction="btnPasteHeadingStyles_Click" screentip="将复制的章节样式粘贴应用到选择区或文档的章节" label="粘贴章节样式" />
+                    <button id="ribbtnCopyHeadingsStructure" onAction="ribbtnCopyHeadingsStructure_Click" screentip="复制章节结构" label="复制章节结构" />
+                    <separator id="separator4" />
+                    <button id="ribbtnSaveCurHeadingStyle2Style" onAction="ribbtnSaveCurHeadingStyle2Style_Click" screentip="将选择区或当前文档的章节样式保存到当前文档的样式表中" label="保存章节样式" />
+                    <checkBox id="chkHeadingsStylesPersist" screentip="将选择区或当前文档的章节样式保存到Normal模板的样式表中" label="保存到样式库" />
+                </group>
+                <group id="grpQuickBookmark" label="快捷导航">
+                    <button id="btnNavAddBkmk" onAction="btnNavAddBkmk_Click" screentip="在当前位置设置快捷书签" label="添加" />
+                    <button id="ribBtnRemoveJetNav" onAction="ribBtnRemoveJetNav_Click" screentip="删除当前位置的快捷书签" label="删除" />
+                    <button id="btnClearBkmk" onAction="btnClearBkmk_Click" screentip="清除所有快捷书签" label="清除" />
+                    <separator id="separator6" />
+                    <box id="box6">
+                        <button id="btnNavFirst" onAction="btnNavFirst_Click" screentip="跳转到第一个快捷书签" label="|&lt;" showLabel="false" />
+                        <button id="btnNavLast" onAction="btnNavLast_Click" screentip="跳转到最后一个快捷书签" label="&gt;|" showLabel="false" />
+                    </box>
+                    <box id="box7">
+                        <button id="btnNavPrev" onAction="btnNavPrev_Click" screentip="跳转到前一个书签" label="&lt;" showLabel="false" />
+                        <button id="btnNavNext" onAction="btnNavNext_Click" screentip="跳转到下一个书签" label="&gt;" showLabel="false" />
+                    </box>
+                    <button id="ribBtnJump2Toc" onAction="ribBtnJump2Toc_Click" label="目录" />
+                    <button id="ribBtnPrevEditPos" onAction="ribBtnPrevEditPos_Click" visible="false" label="前编辑位置" showImage="false" />
+                    <button id="ribBtnNextEditPos" onAction="ribBtnNextEditPos_Click" visible="false" label="后编辑位置" showImage="false" />
+                </group>
+                <group id="groupLocalVer" label="本地版本">
+                    <button id="btnLocalVerMileStone" onAction="btnLocalVerMileStone_Click" screentip="将当前文档的内容保存一份里程碑版本" label="保存关键版本" />
+                    <button id="ribbtnOpenVerDir" onAction="ribbtnOpenVerDir_Click" screentip="打开本地版本文件存放的目录" label="打开版本目录" />
+                    <checkBox id="chkGenLocalVer" onAction="chkGenLocalVer_Click" screentip="勾选则在保存时对当前文档保存一个版本" label="产生本地版本" />
+                </group>
+                <group id="group2" label="工作区">
+                    <button id="btnTogglePanePos" onAction="btnTogglePanePos_Click" screentip="切换任务窗居左或居右" label="左右切换" />
+                    <button id="toggleTaskWin" onAction="toggleTaskWin_Click" screentip="切换任务窗居左或居右" label="可见切换" />
+                </group>
+                <group id="grpFuncPages" label="版本更新" visible="false">
+                    <button id="ribBtnCheckUpdate" onAction="ribBtnCheckUpdate_Click" screentip="手动检查更新" label="检查更新" />
+                    <checkBox id="chkAutoCheckUpdate" onAction="chkAutoCheckUpdate_Click" screentip="勾选后则启动时进行自动检查" label="自动" />
+                </group>
+                <group id="group1" label="帮助">
+                    <button id="ribBtnTutorial" onAction="ribBtnTutorial_Click" visible="false" screentip="入门帮助" supertip="将打开PDF文档，请安装PDF阅读器" label="入门" showImage="false" />
+                    <button id="ribBtnHelp" onAction="ribBtnHelp_Click" screentip="详细帮助" supertip="将打开PDF文档，请安装PDF阅读器" label="帮助" />
+                    <button id="ribbtnAbout" onAction="ribbtnAbout_Click" label="关于" />
+                    <button id="ribLoadSoloLic" onAction="ribLoadSoloLic_Click" screentip="加载单机版许可" supertip="用户由此可加载单机版许可文件" label="本机许可" />
+                    <button id="RibbtnRegister" onAction="RibbtnRegister_Click" visible="false" screentip="个人版注册" supertip="联网进行个人版许可注册" label="注册" />
+                </group>
+            </tab>
+        </tabs>
+    </ribbon>
+</customUI>

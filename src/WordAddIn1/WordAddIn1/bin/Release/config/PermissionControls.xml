@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PermissionControls>
+
+<function_group id="" showname="工作区面板" controlname="OperationPanel" controltype="OperationPanel">
+  <function_group id="" showname="tabCtrl" controlname="tabCtrl" controltype="TabControl">
+    <function_group id="" showname="文库" controlname="tabPageShare" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="关联计算" controlname="tabPageRel" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="章节序号" controlname="tabPageHeadingSn" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="章节样式" controlname="tabPageHeadingStyles" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="样式文档" controlname="tabPageUnitedStyle" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="多选器" controlname="tabPageMultiSel" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="批量题注" controlname="tabPageMultiTiZhu" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="对象导航" controlname="tabPageObjNav" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="数据" controlname="tabPageDataTrans" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="填报汇总" controlname="tabPageFillGather" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="结构对比" controlname="tabPageCompare" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="内容复用" controlname="tabPageCntList" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="数转换" controlname="tabPageNumTrans" controltype="TabPage">
+    </function_group>
+
+    <function_group id="" showname="信息" controlname="tabPageInfo" controltype="TabPage">
+    </function_group>
+
+  </function_group>
+
+</function_group>
+
+<function_group id="" showname="右键菜单" controlname="rightMenu" controltype="ContextMenuStrip">
+    <function_item id="" showname="应用章节样式" controlname="menuItemApplyStyle" controltype="ToolStripMenuItem">
+    </function_item>
+
+    <function_item id="" showname="内容复用" controlname="menuItemCntReuse" controltype="ToolStripMenuItem">
+    </function_item>
+
+</function_group>
+
+<function_group id="" showname="菜单" controlname="Ribbon" controltype="OfficeRibbon">
+    <function_group id="" showname="登录" controlname="grpConfig" controltype="RibbonGroupImpl">
+    </function_group>
+
+    <function_group id="" showname="常用" controlname="grpComOp" controltype="RibbonGroupImpl">
+    </function_group>
+
+    <function_group id="" showname="填充" controlname="grpAutoNumbering" controltype="RibbonGroupImpl">
+    </function_group>
+
+    <function_group id="" showname="大纲级别" controlname="grpOutline" controltype="RibbonGroupImpl">
+    </function_group>
+
+    <function_group id="" showname="章节样式" controlname="grpPane" controltype="RibbonGroupImpl">
+    </function_group>
+
+    <function_group id="" showname="快捷导航" controlname="grpQuickBookmark" controltype="RibbonGroupImpl">
+    </function_group>
+
+    <function_group id="" showname="本地版本" controlname="groupLocalVer" controltype="RibbonGroupImpl">
+    </function_group>
+
+    <function_group id="" showname="工作区" controlname="group2" controltype="RibbonGroupImpl">
+    </function_group>
+
+    <function_group id="" showname="版本更新" controlname="grpFuncPages" controltype="RibbonGroupImpl">
+    </function_group>
+
+    <function_group id="" showname="帮助" controlname="group1" controltype="RibbonGroupImpl">
+    </function_group>
+
+</function_group>
+
+</PermissionControls>

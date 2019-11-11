@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Office.Tools.Outlook.v4.0.Utilities</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionBase">
+      <summary>表示基于用户控件的 Outlook 窗体区域。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionBase.#ctor(Microsoft.Office.Tools.Outlook.Factory,Microsoft.Office.Interop.Outlook.FormRegion)"></member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionBase.Base">
+      <summary>获取此 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionBase" /> 对象扩展的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionControl" /> 对象。</summary>
+      <returns>此 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionBase" /> 对象扩展的对象。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionBase.Dispose(System.Boolean)">
+      <summary>释放由 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionBase" /> 占用的资源。</summary>
+      <param name="disposing">如果为 true，则释放托管资源和非托管资源；如果为 false，则仅释放非托管资源。</param>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionBase.Factory">
+      <summary>获取或设置与此 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionBase" /> 关联的窗体区域工厂。</summary>
+      <returns>实现 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegionFactory" /> 接口的对象。</returns>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Outlook.FormRegionBase.FormRegionClosed">
+      <summary>在窗体区域关闭前发生。</summary>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Outlook.FormRegionBase.FormRegionShowing">
+      <summary>在创建窗体区域的实例后但在窗体区域显示前发生。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionBase.Manifest">
+      <summary>获取一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" />，它描述窗体区域在 Outlook 中的显示方式。</summary>
+      <returns>
+        <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" />，它描述窗体区域在 Outlook 中的显示方式。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionBase.Microsoft#Office#Tools#IExtension#ExtensionBase"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionBase.OnShutdown">
+      <summary>在窗体区域关闭前发生。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionBase.OnStartup">
+      <summary>在创建窗体区域的实例后但在窗体区域显示前发生。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionBase.OutlookFormRegion">
+      <summary>获取或设置本机窗体区域对象。</summary>
+      <returns>一个表示窗体区域的 <see cref="T:Microsoft.Office.Interop.Outlook._FormRegion" />。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionBase.OutlookItem">
+      <summary>获取显示窗体区域的 Outlook 项。</summary>
+      <returns>一个 <see cref="T:System.Object" />，表示显示窗体区域的 Outlook 项。</returns>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase">
+      <summary>提供对 Outlook 外接程序项目中的 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 对象的访问权限。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.#ctor(System.Collections.Generic.IList{Microsoft.Office.Tools.Outlook.IFormRegion})"></member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.Base">
+      <summary>获取 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase" /> 中的 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 对象的 <see cref="T:System.Collections.Generic.IList`1" />。</summary>
+      <returns>一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase" /> 中的 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 对象的 <see cref="T:System.Collections.Generic.IList`1" />。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.Microsoft#Office#Tools#IExtension#ExtensionBase"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection{T}#Add(Microsoft.Office.Tools.Outlook.IFormRegion)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection{T}#Clear"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection{T}#Contains(Microsoft.Office.Tools.Outlook.IFormRegion)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection{T}#CopyTo(Microsoft.Office.Tools.Outlook.IFormRegion[],System.Int32)"></member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection{T}#Count"></member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection{T}#IsReadOnly"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection{T}#Remove(Microsoft.Office.Tools.Outlook.IFormRegion)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#IEnumerable{T}#GetEnumerator"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#IList{T}#IndexOf(Microsoft.Office.Tools.Outlook.IFormRegion)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#IList{T}#Insert(System.Int32,Microsoft.Office.Tools.Outlook.IFormRegion)"></member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#IList{T}#Item(System.Int32)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#IList{T}#RemoveAt(System.Int32)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#IEnumerable#GetEnumerator"></member>
+    <member name="T:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase">
+      <summary>表示基于用户控件的 Outlook 窗体区域。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.#ctor(Microsoft.Office.Tools.Outlook.Factory,Microsoft.Office.Interop.Outlook.FormRegion)"></member>
+    <member name="P:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.Base">
+      <summary>获取此 <see cref="T:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase" /> 对象扩展的 <see cref="T:Microsoft.Office.Tools.Outlook.ImportedFormRegion" /> 对象。</summary>
+      <returns>此 <see cref="T:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase" /> 对象扩展的对象。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.Factory">
+      <summary>获取或设置与此 <see cref="T:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase" /> 关联的窗体区域工厂。</summary>
+      <returns>实现 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegionFactory" /> 接口的对象。</returns>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.FormRegionClosed">
+      <summary>在窗体区域关闭前发生。</summary>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.FormRegionShowing">
+      <summary>在创建窗体区域的实例后但在窗体区域显示前发生。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.GetFormRegionControl(System.String)">
+      <summary>从窗体区域的 Microsoft.Vbe.Interop.Forms.UserForm 返回指定控件。</summary>
+      <returns>
+        <paramref name="identifier" /> 指定的控件。</returns>
+      <param name="identifier">要在窗体区域的Microsoft.Vbe.Interop.Forms.UserForm 中查找的控件的名称。</param>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookFormRegion" /> 属性所指定的窗体区域为 null。</exception>
+      <exception cref="T:Microsoft.Office.Tools.Outlook.ControlNotFoundException">标识符与 .ofs 文件中的控件不匹配。</exception>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.InitializeControls">
+      <summary>初始化窗体区域中的控件。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.Microsoft#Office#Tools#IExtension#ExtensionBase"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.Microsoft#Office#Tools#Outlook#IFormRegion#OnShutdown"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.Microsoft#Office#Tools#Outlook#IFormRegion#OnStartup"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.Microsoft#Office#Tools#Outlook#IImportedFormRegionExtension#InitializeControls"></member>
+    <member name="P:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookFormRegion">
+      <summary>获取或设置本机窗体区域对象。</summary>
+      <returns>一个表示窗体区域的 <see cref="T:Microsoft.Office.Interop.Outlook.FormRegion" />。</returns>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookItem">
+      <summary>获取为其显示窗体区域的 Microsoft Office Outlook 项。</summary>
+      <returns>一个 <see cref="T:System.Object" />，表示为其显示窗体区域的 Outlook 项。</returns>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.OutlookAddInBase">
+      <summary>在您使用 Visual Studio 创建的 Outlook 应用程序级外接程序中为 ThisAddIn 类提供基类。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.OutlookAddInBase.#ctor(Microsoft.Office.Tools.Outlook.Factory,System.IServiceProvider,System.String,System.String)"></member>
+    <member name="P:Microsoft.Office.Tools.Outlook.OutlookAddInBase.Base">
+      <summary>获取此 <see cref="T:Microsoft.Office.Tools.Outlook.OutlookAddInBase" /> 对象扩展的 <see cref="T:Microsoft.Office.Tools.Outlook.OutlookAddIn" /> 对象。</summary>
+      <returns>此 <see cref="T:Microsoft.Office.Tools.Outlook.OutlookAddInBase" /> 对象扩展的对象。</returns>
+    </member>
+    <member name="E:Microsoft.Office.Tools.Outlook.OutlookAddInBase.FormRegionFactoryResolve">
+      <summary>在加载外接程序时，以及在注册表中指定的窗体区域名与在外接程序中定义的任何窗体区域名不匹配时发生。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.OutlookAddInBase.GetFormRegions"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.OutlookAddInBase.GetFormRegions(Microsoft.Office.Interop.Outlook.Explorer,System.Type)">
+      <returns>若要访问特定资源管理器中显示的所有 Microsoft Office Outlook 窗体区域，请调用 Globals 类的 FormRegions 属性，并传入一个表示该资源管理器的 <see cref="T:Microsoft.Office.Interop.Outlook.Explorer" /> 对象。有关更多信息，请参见Accessing a Form Region at Run Time。</returns>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.OutlookAddInBase.GetFormRegions(Microsoft.Office.Interop.Outlook.Inspector,System.Type)"></member>
+  </members>
+</doc>

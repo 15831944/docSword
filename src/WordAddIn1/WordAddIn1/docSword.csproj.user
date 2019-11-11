@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>C:\Users\Administrator\Desktop\新建文件夹\</PublishUrlHistory>
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
+    <StartAction>Program</StartAction>
+    <StartProgram>d:\Program Files %28x86%29\Kingsoft\WPS Office\10.8.0.6471\office6\wps.exe</StartProgram>
+    <StartWorkingDirectory>d:\Program Files %28x86%29\Kingsoft\WPS Office\10.8.0.6471\office6\</StartWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>
+    </ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <StartAction>Project</StartAction>
+    <StartProgram>C:\Program Files (x86)\Kingsoft\WPS Office\10.8.0.6471\office6\wps.exe</StartProgram>
+    <StartWorkingDirectory>C:\Program Files (x86)\Kingsoft\WPS Office\10.8.0.6471\office6\</StartWorkingDirectory>
+  </PropertyGroup>
+</Project>

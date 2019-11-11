@@ -1,0 +1,6 @@
+F:\Work\OpenSource\docSword\plg\src\ComputingParser\ComputingParser\bin\Release\Antlr4.Parser.dll
+F:\Work\OpenSource\docSword\plg\src\ComputingParser\ComputingParser\bin\Release\Antlr4.Parser.pdb
+F:\Work\OpenSource\docSword\plg\src\ComputingParser\ComputingParser\bin\Release\Antlr4.Runtime.dll
+F:\Work\OpenSource\docSword\plg\src\ComputingParser\ComputingParser\obj\Release\Antlr4.Parser.dll
+F:\Work\OpenSource\docSword\plg\src\ComputingParser\ComputingParser\obj\Release\Antlr4.Parser.pdb
+F:\Work\OpenSource\docSword\plg\src\ComputingParser\ComputingParser\obj\Release\ComputingParser.csprojResolveAssemblyReference.cache

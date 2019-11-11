@@ -1,0 +1,15 @@
+﻿Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\Word\Addins\WpsDocSword.WPSWord2018]
+"FriendlyName"="docSwordwps"
+
+"Description"="doc利器wps"
+
+"LoadBehavior"=dword:00000003
+
+"CommandLineSafe"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Kingsoft\Office\WPS\AddinsWL]
+
+"WpsDocSword.WPSWord2018"=""
+

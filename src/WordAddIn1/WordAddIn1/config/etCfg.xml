@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configItems>
+
+  <item name="cfgAutoUpdateSvrUrl"  value="http://10.115.246.179:30001/WordAddinService.asmx">
+  </item>
+
+  <item name="cfgCerSvrUrl"  value="http://10.115.246.179:30001/WordAddinService.asmx">
+  </item>
+
+</configItems>

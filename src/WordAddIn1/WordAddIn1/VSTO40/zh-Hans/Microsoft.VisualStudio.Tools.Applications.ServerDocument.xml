@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.Tools.Applications.ServerDocument</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Office.Tools.OfficeXpsDocumentException">
+      <summary>在以下情况下引发的异常： 无法对 Office Open XML 格式文档执行操作，原因是该文档的格式无效。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.OfficeXpsDocumentException.#ctor"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeXpsDocumentException.#ctor(System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeXpsDocumentException.#ctor(System.String,System.Exception)"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedData">
+      <summary>包含在文档级自定义项的数据岛中缓存的所有数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedData.Clear">
+      <summary>从 Office 解决方案文档中移除缓存数据，并从缓存的数据清单中移除缓存数据的说明。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedData.ClearData">
+      <summary>从 Office 解决方案文档中移除缓存的数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedData.FromXml(System.String)">
+      <summary>根据 XML 字符串在 Office 解决方案中重新构造缓存数据。</summary>
+      <param name="cachedDataManifest">用于在 Office 解决方案中重新构造缓存数据的 XML 字符串。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="cachedDataManifest" /> 为 null 或空字符串。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedData.HostItems">
+      <summary>获取数据缓存中 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> 对象的集合。</summary>
+      <returns>包含数据缓存中数据的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection" />。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedData.ToXml">
+      <summary>返回缓存在 Office 解决方案文档中的数据的序列化 XML 表示形式。</summary>
+      <returns>一个字符串，包含缓存在 Office 解决方案文档中的数据的序列化 XML 表示形式。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem">
+      <summary>对于使用 Visual Studio 中的 Office 开发工具创建的文档级自定义项，包含在其中的单个类中声明的所有缓存数据对象。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem.CachedData">
+      <summary>获取在 Office 解决方案的单个类中声明的缓存数据对象的集合。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection" />，它包含在 Office 解决方案的单个类中声明的缓存数据对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem.Id">
+      <summary>获取或设置声明 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> 中的缓存数据对象的命名空间和类。</summary>
+      <returns>声明 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> 中的缓存数据对象的命名空间和类。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection">
+      <summary>表示文档级自定义项的数据缓存中的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> 对象的集合，该自定义项是使用 Visual Studio 中的 Office 开发工具创建的。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection.Add(System.String)">
+      <summary>将指定的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> 添加到集合的末尾。</summary>
+      <returns>已添加到集合末尾的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />。</returns>
+      <param name="hostItemId">在其中缓存源数据的命名空间和类。</param>
+      <exception cref="T:System.InvalidOperationException">与 <paramref name="hostItemId" /> 对应的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> 已存在于集合中。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection.Contains(System.String)">
+      <summary>返回一个指示集合是否包含指定的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> 的值。</summary>
+      <returns>如果集合包含与 <paramref name="hostItemId" /> 参数对应的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />，则为 true；否则为 false。</returns>
+      <param name="hostItemId">在其中缓存源数据的命名空间和类。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection.GetEnumerator">
+      <summary>返回可用于循环访问集合内容的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator" />。</summary>
+      <returns>一个可用于循环访问集合内容的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection.Item(System.String)">
+      <summary>获取由缓存了源数据的命名空间和类标识的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />。</summary>
+      <returns>与 <paramref name="hostItemId" /> 参数对应的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />；如果没有找到与 <paramref name="hostItemId" /> 对应的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />，则为 null。</returns>
+      <param name="hostItemId">在其中缓存源数据的命名空间和类。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection.Remove(System.String)">
+      <summary>从集合中移除指定的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />，它由缓存了源数据的命名空间和类名标识。</summary>
+      <param name="hostItemId">在其中缓存源数据的命名空间和类的名称。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator">
+      <summary>循环访问 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection" />。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current">
+      <summary>获取枚举数当前所在位置的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />。</summary>
+      <returns>枚举数当前所在位置的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />。</returns>
+      <exception cref="T:System.InvalidOperationException">枚举数位于集合的第一个元素之前或最后一个元素之后。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext">
+      <summary>将枚举数前移到 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection" /> 中的下一个 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />。</summary>
+      <returns>如果枚举数成功地前移到下一个 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />，则为 true；如果枚举数越过集合的末尾，则为 false。</returns>
+      <exception cref="T:System.InvalidOperationException">在创建枚举数后修改了此集合。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset">
+      <summary>将枚举数设置为其初始位置，该位置在集合中第一个 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> 之前。</summary>
+      <exception cref="T:System.InvalidOperationException">在创建枚举数后修改了此集合。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System#Collections#IEnumerator#Current">
+      <summary>有关此成员的说明，请参见 <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current" />。</summary>
+      <returns>此成员是显式的接口成员实现。它只能在 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator" /> 实例被强制转换为 <see cref="T:System.Collections.IEnumerator" /> 接口时使用。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System#IDisposable#Dispose">
+      <summary>释放 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator" /> 使用的所有资源。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem">
+      <summary>表示使用 Visual Studio 中的 Office 开发工具创建的文档级自定义项中的缓存数据对象。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.DataType">
+      <summary>获取或设置缓存数据对象的类型的程序集限定名称。</summary>
+      <returns>缓存数据对象的类型的程序集限定名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Id">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 所表示的缓存数据对象的名称。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> 所表示的缓存数据对象的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Schema">
+      <summary>如果 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 所表示的缓存数据对象为 <see cref="T:System.Data.DataSet" /> 或 <see cref="T:System.Data.DataTable" />，则获取或设置描述该缓存数据对象的架构。</summary>
+      <returns>如果缓存数据对象为 <see cref="T:System.Data.DataSet" /> 或 <see cref="T:System.Data.DataTable" />，则此属性返回一个描述该缓存数据对象的架构；否则返回 null。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance(System.Object)">
+      <summary>将数据序列化到 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 所表示的缓存数据对象中。</summary>
+      <param name="value">一个对象，包含要保存到数据缓存中的对象的数据。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 表示的缓存数据对象的 XML 表示形式。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 表示的缓存数据对象的 XML 表示形式。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection">
+      <summary>表示文档级自定义项中的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 对象的集合，该自定义项是使用 Visual Studio 中的 Office 开发工具创建的。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection.Add(System.String,System.String)">
+      <summary>将指定的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 添加到集合的末尾。</summary>
+      <returns>已添加到集合末尾的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />。</returns>
+      <param name="dataId">要添加到数据缓存中的对象的名称。</param>
+      <param name="dataType">要添加到数据缓存中的对象类型的完整程序集限定名称。</param>
+      <exception cref="T:System.InvalidOperationException">与 <paramref name="dataId" /> 对应的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 已存在于集合中。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection.Contains(System.String)">
+      <summary>返回一个指示集合是否包含指定的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 的值。</summary>
+      <returns>如果集合包含与 <paramref name="dataId" /> 参数对应的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />，则为 true；否则为 false。</returns>
+      <param name="dataId">缓存数据对象的名称。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection.GetEnumerator">
+      <summary>返回可用于循环访问集合内容的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator" />。</summary>
+      <returns>一个可用于循环访问集合内容的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection.Item(System.String)">
+      <summary>获取用缓存数据对象的名称标识的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />。</summary>
+      <returns>与 <paramref name="dataID" /> 参数对应的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />；如果没有找到与 <paramref name="dataID" /> 对应的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />，则为 null。</returns>
+      <param name="dataId">缓存数据对象的名称。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection.Remove(System.String)">
+      <summary>从集合中移除由缓存数据对象的名称标识的指定 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />。</summary>
+      <param name="dataId">缓存数据对象的名称。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator">
+      <summary>循环访问 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection" />。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator.Current">
+      <summary>获取枚举数当前所在位置的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />。</summary>
+      <returns>枚举数当前所在位置的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />。</returns>
+      <exception cref="T:System.InvalidOperationException">枚举数位于集合的第一个元素之前或最后一个元素之后。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator.MoveNext">
+      <summary>将枚举数前移到 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection" /> 中的下一个 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />。</summary>
+      <returns>如果枚举数成功地前移到下一个 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />，则为 true；如果枚举数越过集合的末尾，则为 false。</returns>
+      <exception cref="T:System.InvalidOperationException">在创建枚举数后修改了此集合。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator.Reset">
+      <summary>将枚举数设置为其初始位置，该位置在集合中第一个 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 之前。</summary>
+      <exception cref="T:System.InvalidOperationException">在创建枚举数后修改了此集合。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator.System#Collections#IEnumerator#Current">
+      <summary>有关此成员的说明，请参见 <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator.Current" />。</summary>
+      <returns>此成员是显式的接口成员实现。它只能在 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator" /> 实例被强制转换为 <see cref="T:System.Collections.IEnumerator" /> 接口时使用。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator.System#IDisposable#Dispose">
+      <summary>释放 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemEnumerator" /> 使用的所有资源。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.CachedDataNodeBase">
+      <summary>为使用 Visual Studio 中的 Office 开发工具创建的文档级自定义项中所用的缓存数据类提供基类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.CachedDataNodeBase.#ctor"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument">
+      <summary>提供对文档或工作簿（属于使用 Visual Studio 中的 Office 开发工具创建的文档级自定义项）中的缓存数据和自定义项信息的访问。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.#ctor(System.Byte[],System.String)">
+      <summary>使用表示要加载的文档的字节数组和该文档的文件扩展名，初始化 <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> 类的新实例。</summary>
+      <param name="bytes">一个表示要加载的文档的字节数组。</param>
+      <param name="fileType">文档的文件扩展名，存储在 <paramref name="bytes" /> 参数中，前面有一个句点 (.)，例如“.xlsx”或“.docx”。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="bytes" /> 参数为 null 或为空。- 或 -<paramref name="fileType" /> 参数为 null 或为空，或者完全由空白字符组成。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException"> 不支持 <paramref name="fileType" /> 参数指定的文件扩展名。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">
+        <paramref name="documentPath" /> 指定的文件有不是用  或 Microsoft Office 系统的 Visual Studio 工具创建的自定义项（3.0 版的运行时）。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.#ctor(System.IO.Stream,System.String)">
+      <summary>使用表示要加载的文档的流和该文档的文件扩展名，初始化 <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> 类的新实例。</summary>
+      <param name="stream">表示要加载的文档的流。</param>
+      <param name="fileType">文档的文件扩展名，存储在 <paramref name="bytes" /> 参数中，前面有一个句点 (.)，例如“.xlsx”或“.docx”。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="stream" /> 参数为 null 或为空。- 或 -<paramref name="fileType" /> 参数为 null 或为空，或者完全由空白字符组成。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="stream" /> 参数的长度为零或其当前位置位于流的末尾。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException"> 不支持 <paramref name="fileType" /> 参数指定的文件扩展名。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">
+        <paramref name="documentPath" /> 指定的文件有不是用  或 Microsoft Office 系统的 Visual Studio 工具创建的自定义项（3.0 版的运行时）。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.#ctor(System.String)">
+      <summary>使用要加载的文档的完整路径，初始化 <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> 类的新实例。</summary>
+      <param name="documentPath">要加载的文档的完整路径。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="documentPath" /> 参数为 null 或为空，或者完全由空白字符组成。</exception>
+      <exception cref="T:System.IO.FileNotFoundException">
+        <paramref name="documentPath" /> 指定的文件不存在。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">
+        <paramref name="documentPath" /> 指定的文件有不是用  或 Microsoft Office 系统的 Visual Studio 工具创建的自定义项（3.0 版的运行时）。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException"> 不支持 <paramref name="documentPath" /> 指定的文件的文件扩展名。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.#ctor(System.String,System.IO.FileAccess)">
+      <summary>使用要加载的文档的完整路径和一个指示对该文档的文件访问权限的值，初始化 <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> 类的新实例。</summary>
+      <param name="documentPath">要加载的文档的完整路径。</param>
+      <param name="access">一个指示对文档的文件访问权限的值。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="documentPath" /> 参数为 null 或为空，或者完全由空白字符组成。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="access" /> 的值为 System.IO.FileAccess.Write。</exception>
+      <exception cref="T:System.IO.FileNotFoundException">
+        <paramref name="documentPath" /> 指定的文件不存在。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotCustomizedException">
+        <paramref name="documentPath" /> 参数指定的文件不具有自定义项，并且 <paramref name="access" /> 的值为 System.IO.FileAccess.Read。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">
+        <paramref name="documentPath" /> 指定的文件有不是用  或 Microsoft Office 系统的 Visual Studio 工具创建的自定义项（3.0 版的运行时）。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException"> 不支持 <paramref name="documentPath" /> 指定的文件的文件扩展名。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization(System.String,System.String,System.Guid,System.Uri)">
+      <summary>使用指定的文档、程序集名称、解决方案 ID 和部署清单，将自定义项附加到指定文档。</summary>
+      <param name="documentPath">要附加自定义项的文档的完整路径。</param>
+      <param name="assemblyName">自定义项的程序集的完整路径。该路径必须在本地文件系统上或作为 UNC 共享；不能指定 HTTP 位置。</param>
+      <param name="solutionId"> 用来标识解决方案的 GUID。</param>
+      <param name="deploymentManifestUrl">解决方案部署清单的 URL。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="documentPath" /> 或 <paramref name="assemblyName" /> 为 null 或为空。</exception>
+      <exception cref="T:System.IO.FileNotFoundException">
+        <paramref name="documentPath" /> 或 <paramref name="assemblyName" /> 引用的文件不存在。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyCustomizedException">
+        <paramref name="documentPath" /> 指定的文档已具有自定义项。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotCustomizedException">
+        <paramref name="documentPath" /> 指定的文档损坏，或其权限受限制。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException"> 不支持 <paramref name="documentPath" /> 指定的文档的文件扩展名。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization(System.String,System.String,System.Guid,System.Uri,System.Boolean,System.String[]@)"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization(System.String,System.Uri)">
+      <summary>使用指定的程序集名称和部署清单，将自定义项附加到指定文档。</summary>
+      <param name="documentPath">要附加自定义项的文档的完整路径。</param>
+      <param name="deploymentManifestUrl">解决方案部署清单的 URL。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="documentPath" /> 或 <paramref name="deploymentManifestUrl" /> 为 null 或为空。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="deploymentManifestUrl" /> 未指定绝对 URL。</exception>
+      <exception cref="T:System.IO.FileNotFoundException">
+        <paramref name="documentPath" /> 或 <paramref name="deploymentManifestUrl" /> 引用的文件不存在。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyCustomizedException">
+        <paramref name="documentPath" /> 指定的文档已具有自定义项。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidManifestException">
+        <paramref name="deploymentManifestUrl" /> 指定的部署清单不是有效的部署清单。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotCustomizedException">
+        <paramref name="documentPath" /> 指定的文档损坏，或其权限受限制。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException"> 不支持 <paramref name="documentPath" /> 指定的文档的文件扩展名。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData">
+      <summary>获取一个表示文档中包含的缓存数据的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedData" /> 对象。</summary>
+      <returns>包含在文档中的缓存数据。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Close">
+      <summary>关闭 <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> 对象。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.ServerDocument.DeploymentManifestUrl">
+      <summary>获取或设置与文档关联的自定义项的部署清单 URL。</summary>
+      <returns>一个 URL，指定与文档关联的自定义项的部署清单的名称和位置。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Document">
+      <summary>获取加载到 <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> 中的内存中文档的字节数组。</summary>
+      <returns>加载到 <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> 中的内存中文档的字节数组。</returns>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentClosedException">文档已关闭。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.GetCustomizationVersion(System.String)">
+      <summary>返回用于创建与指定文档相关联的自定义项的  的版本。</summary>
+      <returns>一个编号，指定用于创建关联的自定义项的  版本。</returns>
+      <param name="documentPath">要检查的文档的完整路径。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="documentPath" /> 参数为 null 或为空，或者完全由空白字符组成。</exception>
+      <exception cref="T:System.IO.FileNotFoundException">
+        <paramref name="documentPath" /> 指定的文件不存在。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException"> 不支持 <paramref name="documentPath" /> 指定的文件的文件扩展名。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.IsCacheEnabled(System.String)">
+      <summary>获取一个值，该值指示指定文档是否具有数据缓存。</summary>
+      <returns>如果指定文档具有数据缓存，则为 true；否则为 false。</returns>
+      <param name="documentPath">要检查的文档的完整路径。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="documentPath" /> 参数为 null 或为空，或者完全由空白字符组成。</exception>
+      <exception cref="T:System.IO.FileNotFoundException">
+        <paramref name="documentPath" /> 指定的文件不存在。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">
+        <paramref name="documentPath" /> 指定的文件有不是用  或 Microsoft Office 系统的 Visual Studio 工具创建的自定义项（3.0 版的运行时）。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.IsCustomized(System.String)">
+      <summary>获取一个值，该值指示指定文档是否具有使用  创建的自定义项。</summary>
+      <returns>如果文档具有使用  创建的自定义项，则为 true；如果文档不具有自定义项，则为 false。</returns>
+      <param name="documentPath">要检查自定义项的文档的完整路径。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="documentPath" /> 参数为 null 或为空，或者完全由空白字符组成。</exception>
+      <exception cref="T:System.IO.FileNotFoundException">
+        <paramref name="documentPath" /> 中的文件不存在。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">
+        <paramref name="documentPath" /> 指定的文件有不是用  或 Microsoft Office 系统的 Visual Studio 工具创建的自定义项（3.0 版的运行时）。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization(System.String)">
+      <summary>从文档中移除自定义项。</summary>
+      <param name="documentPath">要移除自定义项的文档的完整路径。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="documentPath" /> 参数为 null 或为空，或者完全由空白字符组成。</exception>
+      <exception cref="T:System.IO.FileNotFoundException">
+        <paramref name="documentPath" /> 指定的文件不存在。</exception>
+      <exception cref="T:System.IO.IOException">
+        <paramref name="documentPath" /> 指定的文件是只读文件，或者不能访问。</exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="documentPath" /> 指定的文件不具有自定义项，或者在加载清单时出错。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">
+        <paramref name="documentPath" /> 指定的文件有不是用  或 Microsoft Office 系统的 Visual Studio 工具创建的自定义项（3.0 版的运行时）。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save">
+      <summary>保存使用 <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> 类对文档所做的任何更改。</summary>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentClosedException">
+        <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> 已关闭。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingHostItemIdException">
+        <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> 的 <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem.Id" /> 属性为 null 或为空。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingDataIdException">
+        <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 的 <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Id" /> 属性为 null 或为空。</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingTypeException">
+        <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 的 <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.DataType" /> 属性为 null 或为空。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.ServerDocument.SolutionId">
+      <summary>获取  用来标识解决方案的 GUID。</summary>
+      <returns> 用来标识解决方案的 GUID。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.System#IDisposable#Dispose">
+      <summary>释放 <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> 使用的所有资源。</summary>
+    </member>
+  </members>
+</doc>

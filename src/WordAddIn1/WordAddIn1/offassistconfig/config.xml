@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configItems>
+  <item name="cfgLoginUrl"  value="http://10.115.246.113:8080/udp/servlet/login">
+  </item>
+
+  <item name="cfgGetTypeTreeUrl"  value="http://10.115.246.113:8080/udp/servlet/projecttree">
+  </item>
+
+  <item name="cfgGetFilesUrl"  value="http://10.115.246.113:8080/udp/servlet/filerecord">
+  </item>
+
+  <item name="cfgDownloadFileUrl"  value="http://10.115.246.113:8080/udp/servlet/filedownload">
+  </item>
+
+  <item name="cfgUploadFileUrl"  value="http://10.115.246.113:8080/udp/servlet/fileupload">
+  </item>
+
+  <item name="cfgRemoveFileUrl"  value="http://10.115.246.113:8080/udp/servlet/filedelete">
+  </item>
+
+  <item name="cfgAddNewTypeUrl"  value="http://10.115.246.113:8080/udp/servlet/nodeadd">
+  </item>
+
+  <item name="cfgRemoveTypeUrl"  value="http://10.115.246.113:8080/udp/servlet/nodedelete">
+  </item>
+
+  <item name="cfgVstoPermissionUrl"  value="http://10.115.246.113:8080/udp/servlet/clientpermission">
+  </item>
+
+  <item name="cfgFileLibPermissionUrl"  value="http://10.115.246.113:8080/udp/servlet/filepermission">
+  </item>
+
+  <item name="cfgFilePermissionUrl"  value="http://10.115.246.113:8080/udp/servlet/filepermission">
+  </item>
+
+  
+  <item name="cfgDirOperateUrl"  value="http://10.115.246.113:8080/udp/servlet/diroperate">
+  </item>
+  
+  <!-- -->
+  
+  <item name="cfgTempFileLoc"  value="d:\temp">
+  </item>
+
+  <item name="cfgAutoUpdateSvrUrl"  value="http://10.115.246.179:30000/WordAddinService.asmx">
+  </item>
+
+  
+</configItems>

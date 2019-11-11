@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"  encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="docSword" namespace="OfficeAssist.localDB.Model">
+  <class name="OfficeAssist.localDB.Model.tblHeadingStyleFont,docSword" table="tblHeadingStyleFont">
+    <id name="ID" column="ID" type="guid">
+
+    </id>
+    <property name="schemeName" column="schemeName" type="string"  />
+    <property name="OutlineLevel" column="OutlineLevel" type="int"  />
+    <property name="AllCaps" column="AllCaps" type="int"  />
+    <property name="Animation" column="Animation" type="int"  />
+    <property name="Bold" column="Bold" type="int"  />
+    <property name="BoldBi" column="BoldBi" type="int"  />
+    <property name="Color" column="Color" type="int"  />
+    <property name="ColorIndex" column="ColorIndex" type="int"  />
+    <property name="ColorIndexBi" column="ColorIndexBi" type="int"  />
+    <property name="DiacriticColor" column="DiacriticColor" type="int"  />
+    <property name="DisableCharacterSpaceGrid" column="DisableCharacterSpaceGrid" type="bool"  />
+    <property name="DoubleStrikeThrough" column="DoubleStrikeThrough" type="int"  />
+    <property name="Emboss" column="Emboss" type="int"  />
+    <property name="EmphasisMark" column="EmphasisMark" type="int"  />
+    <property name="Engrave" column="Engrave" type="int"  />
+    <property name="Hidden" column="Hidden" type="int"  />
+    <property name="Italic" column="Italic" type="int"  />
+    <property name="ItalicBi" column="ItalicBi" type="int"  />
+    <property name="Kerning" column="Kerning" type="float"  />
+    <property name="strName" column="strName" type="string"  />
+    <property name="NameAscii" column="NameAscii" type="string"  />
+    <property name="NameBi" column="NameBi" type="string"  />
+    <property name="NameFarEast" column="NameFarEast" type="string"  />
+    <property name="NameOther" column="NameOther" type="string"  />
+    <property name="Outline" column="Outline" type="int"  />
+    <property name="Position" column="Position" type="int"  />
+    <property name="Scaling" column="Scaling" type="int"  />
+    <property name="Shadow" column="Shadow" type="int"  />
+    <property name="Size" column="Size" type="float"  />
+    <property name="SizeBi" column="SizeBi" type="float"  />
+    <property name="SmallCaps" column="SmallCaps" type="int"  />
+    <property name="Spacing" column="Spacing" type="float"  />
+    <property name="StrikeThrough" column="StrikeThrough" type="int"  />
+    <property name="Subscript" column="Subscript" type="int"  />
+    <property name="Superscript" column="Superscript" type="int"  />
+    <property name="Underline" column="Underline" type="int"  />
+    <property name="UnderlineColor" column="UnderlineColor" type="int"  />
+
+  </class>
+</hibernate-mapping>

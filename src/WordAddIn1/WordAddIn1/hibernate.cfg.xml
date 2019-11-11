@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+	<session-factory name="NHibernate.docSword">
+		<property name="connection.driver_class">NHibernate.Driver.SQLite20Driver</property>
+		<property name="connection.connection_string">
+      Data Source=C:\Users\Public\gs\doc利器\svdb.db3
+    </property>
+		<property name="dialect">NHibernate.Dialect.SQLiteDialect</property>
+    <mapping  assembly="docSword"/>
+    
+	</session-factory>
+</hibernate-configuration>

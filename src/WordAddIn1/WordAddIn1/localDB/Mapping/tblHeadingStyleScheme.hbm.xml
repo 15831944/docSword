@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"  encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="docSword" namespace="OfficeAssist.localDB.Model">
+  <class name="OfficeAssist.localDB.Model.tblHeadingStyleScheme,docSword" table="tblHeadingStyleScheme">
+    <id name="ID" column="ID" type="guid">
+
+    </id>
+    <property name="schemeName" column="schemeName" type="string"  />
+    <property name="bPreBuiltIn" column="bPreBuiltIn" type="bool"  />
+    <property name="bVisible" column="bVisible" type="bool"  />
+    <property name="nOrderSn" column="nOrderSn" type="int"  />
+
+  </class>
+</hibernate-mapping>
+

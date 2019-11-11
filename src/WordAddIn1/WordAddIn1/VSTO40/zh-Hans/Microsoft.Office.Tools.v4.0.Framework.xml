@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Office.Tools.v4.0.Framework</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Office.Tools.CannotRemoveControlException">
+      <summary>当代码尝试移除在设计时添加到文档中的宿主控件或 Windows 窗体控件时引发的异常。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.CannotRemoveControlException.#ctor"></member>
+    <member name="M:Microsoft.Office.Tools.CannotRemoveControlException.#ctor(System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.CannotRemoveControlException.#ctor(System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.CannotRemoveControlException.#ctor(System.String,System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.CannotRemoveControlException.#ctor(System.String,System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.CannotRemoveControlException.#ctor(System.String,System.String,System.Exception)"></member>
+    <member name="T:Microsoft.Office.Tools.CannotRemoveCustomizationException">
+      <summary>当未能以编程方式从文档中移除自定义项时引发的异常。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.CannotRemoveCustomizationException.#ctor"></member>
+    <member name="M:Microsoft.Office.Tools.CannotRemoveCustomizationException.#ctor(System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.CannotRemoveCustomizationException.#ctor(System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.CannotRemoveCustomizationException.#ctor(System.String,System.Exception)"></member>
+    <member name="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+      <summary>在以下情况下引发的异常：您在运行时尝试向 Microsoft Office Excel 工作簿或 Microsoft Office Word 文档中添加控件，但为该新控件提供的名称在该工作簿或文档中已经存在。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.ControlNameAlreadyExistsException.#ctor"></member>
+    <member name="M:Microsoft.Office.Tools.ControlNameAlreadyExistsException.#ctor(System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.ControlNameAlreadyExistsException.#ctor(System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.ControlNameAlreadyExistsException.#ctor(System.String,System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.ControlNameAlreadyExistsException.#ctor(System.String,System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.ControlNameAlreadyExistsException.#ctor(System.String,System.String,System.Exception)"></member>
+    <member name="T:Microsoft.Office.Tools.InvalidRangeException">
+      <summary>在以下情况下引发的异常：您在运行时尝试向 Microsoft Office Excel 工作簿中添加控件，但指定的范围包含多个区域，而不是一个连续的单元格块。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.InvalidRangeException.#ctor"></member>
+    <member name="M:Microsoft.Office.Tools.InvalidRangeException.#ctor(System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.InvalidRangeException.#ctor(System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.InvalidRangeException.#ctor(System.String,System.Exception)"></member>
+    <member name="T:Microsoft.Office.Tools.RangeNotOnWorksheetException">
+      <summary>提供的范围在工作表上不存在时所引发的异常。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.RangeNotOnWorksheetException.#ctor"></member>
+    <member name="M:Microsoft.Office.Tools.RangeNotOnWorksheetException.#ctor(System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.RangeNotOnWorksheetException.#ctor(System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.RangeNotOnWorksheetException.#ctor(System.String,System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.RangeNotOnWorksheetException.#ctor(System.String,System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.RangeNotOnWorksheetException.#ctor(System.String,System.String,System.Exception)"></member>
+    <member name="T:Microsoft.Office.Tools.Excel.FailureReason">
+      <summary>提供 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 数据绑定失败的原因。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Excel.FailureReason.CouldNotResizeListObject">
+      <summary>未能调整 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 的大小来为所有要显示的数据提供空间。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Excel.FailureReason.InvalidDataSource">
+      <summary>指定的数据源无效。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Excel.FailureReason.NoDataBoundColumnsSpecified">
+      <summary>必需有至少一个指定列映射到 <see cref="T:System.Data.DataTable" />。</summary>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Excel.ListObjectNotDataBoundException">
+      <summary>当您使用未绑定到数据的 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 的 <see cref="M:Microsoft.Office.Tools.Excel.ListObject.Disconnect" /> 方法时引发的异常。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Excel.ListObjectNotDataBoundException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Office.Tools.Excel.ListObjectNotDataBoundException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Excel.ListObjectNotDataBoundException.#ctor(System.Exception)">
+      <summary>用导致此异常的内部异常初始化 <see cref="T:Microsoft.Office.Tools.Excel.ListObjectNotDataBoundException" /> 类的新实例。</summary>
+      <param name="innerException">导致当前异常的异常。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Excel.ListObjectNotDataBoundException.#ctor(System.String)">
+      <summary>使用指定的错误信息初始化 <see cref="T:Microsoft.Office.Tools.Excel.ListObjectNotDataBoundException" /> 类的新实例。</summary>
+      <param name="message">描述错误的消息。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Excel.ListObjectNotDataBoundException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的错误信息和对导致此异常的内部异常的引用来初始化 <see cref="T:Microsoft.Office.Tools.Excel.ListObjectNotDataBoundException" /> 类的新实例。</summary>
+      <param name="message">描述错误的消息。</param>
+      <param name="innerException">导致当前异常的异常。</param>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Excel.SetDataBindingFailedException">
+      <summary>表示发生以下情况时引发的异常：尝试设置 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 控件、<see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件、<see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件或 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件上的数据绑定而失败时。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Excel.SetDataBindingFailedException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Office.Tools.Excel.SetDataBindingFailedException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Excel.SetDataBindingFailedException.#ctor(Microsoft.Office.Tools.Excel.FailureReason)">
+      <summary>用指定的数据绑定失败原因初始化 <see cref="T:Microsoft.Office.Tools.Excel.SetDataBindingFailedException" /> 类的新实例。</summary>
+      <param name="reason">数据绑定失败的原因。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Excel.SetDataBindingFailedException.#ctor(Microsoft.Office.Tools.Excel.FailureReason,System.Exception)">
+      <summary>用指定的数据绑定失败原因和对导致此异常的内部异常的引用来初始化 <see cref="T:Microsoft.Office.Tools.Excel.SetDataBindingFailedException" /> 类的新实例。</summary>
+      <param name="reason">数据绑定失败的原因。</param>
+      <param name="innerException">导致当前异常的异常。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Excel.SetDataBindingFailedException.#ctor(Microsoft.Office.Tools.Excel.FailureReason,System.Exception,System.String)">
+      <summary>用指定的数据绑定失败原因、错误消息和对导致此异常的内部异常的引用来初始化 <see cref="T:Microsoft.Office.Tools.Excel.SetDataBindingFailedException" /> 类的新实例。</summary>
+      <param name="reason">数据绑定失败的原因。</param>
+      <param name="innerException">导致当前异常的异常。</param>
+      <param name="message">描述错误的消息。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Excel.SetDataBindingFailedException.#ctor(Microsoft.Office.Tools.Excel.FailureReason,System.String)">
+      <summary>用指定的数据绑定失败原因和错误消息来初始化 <see cref="T:Microsoft.Office.Tools.Excel.SetDataBindingFailedException" /> 类的新实例。</summary>
+      <param name="reason">数据绑定失败的原因。</param>
+      <param name="message">描述错误的消息。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Excel.SetDataBindingFailedException.#ctor(System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.Excel.SetDataBindingFailedException.#ctor(System.String)">
+      <summary>使用指定的错误消息初始化 <see cref="T:Microsoft.Office.Tools.Excel.SetDataBindingFailedException" /> 类的新实例。</summary>
+      <param name="message">描述错误的消息。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Excel.SetDataBindingFailedException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的错误信息和对导致此异常的内部异常的引用来初始化 <see cref="T:Microsoft.Office.Tools.Excel.SetDataBindingFailedException" /> 类的新实例。</summary>
+      <param name="message">描述错误的消息。</param>
+      <param name="innerException">导致当前异常的异常。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Excel.SetDataBindingFailedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"></member>
+    <member name="P:Microsoft.Office.Tools.Excel.SetDataBindingFailedException.Reason">
+      <summary>提供数据绑定失败的原因。</summary>
+      <returns>
+        <see cref="T:Microsoft.Office.Tools.Excel.FailureReason" /> 枚举成员之一。</returns>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.ControlNotFoundException">
+      <summary>表示当在导入的窗体区域的 Microsoft.Vbe.Interop.Forms.UserForm 中未找到某一控件时发生的错误。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.ControlNotFoundException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Office.Tools.Outlook.ControlNotFoundException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.ControlNotFoundException.#ctor(System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.ControlNotFoundException.#ctor(System.String)">
+      <summary>使用在导入的窗体区域的 Microsoft.Vbe.Interop.Forms.UserForm 中未找到的控件的名称初始化 <see cref="T:Microsoft.Office.Tools.Outlook.ControlNotFoundException" /> 类的新实例。</summary>
+      <param name="identifier">在窗体区域的 Microsoft.Vbe.Interop.Forms.UserForm 中未找到的控件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.ControlNotFoundException.#ctor(System.String,System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.ControlNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"></member>
+    <member name="P:Microsoft.Office.Tools.Outlook.ControlNotFoundException.Identifier">
+      <summary>获取在导入的窗体区域的 Microsoft.Vbe.Interop.Forms.UserForm 中未找到的控件的名称。</summary>
+      <returns>一个字符串，表示在窗体区域的 Microsoft.Vbe.Interop.Forms.UserForm 中未找到的控件的名称。</returns>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute">
+      <summary>表示一个特性，该特性指定与窗体区域关联的 Microsoft Office Outlook 邮件类的名称。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute" /> 类的新实例。</summary>
+      <param name="messageClass">邮件类的名称。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="messageClass" /> 参数为 null 或为空。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="messageClass" /> 参数的长度大于 255 个字符。</exception>
+      <exception cref="T:Microsoft.Office.Tools.Outlook.InvalidMessageClassException">
+        <paramref name="messageClass" /> 参数无效。有关有效邮件类名称的更多信息，请参见Associating a Form Region with an Outlook Message Class。</exception>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute.Activity">
+      <summary>指定 Microsoft Office Outlook 日记项的邮件类名称。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute.Appointment">
+      <summary>指定 Microsoft Office Outlook 约会项的邮件类名称。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute.Contact">
+      <summary>指定 Microsoft Office Outlook 联系人项的邮件类名称。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute.DistributionList">
+      <summary>指定 Microsoft Office Outlook 通讯组列表项的邮件类名称。</summary>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute.MessageClass">
+      <summary>获取与窗体区域关联的邮件类的名称。</summary>
+      <returns>一个字符串，表示与窗体区域关联的邮件类的名称。</returns>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute.Note">
+      <summary>指定 Microsoft Office Outlook 邮件项的邮件类名称。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute.Post">
+      <summary>指定 Microsoft Office Outlook 公告项的邮件类名称。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute.PostRss">
+      <summary>指定 Microsoft Office Outlook RSS 公告项的邮件类名称。</summary>
+    </member>
+    <member name="F:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute.Task">
+      <summary>指定 Microsoft Office Outlook 任务项的邮件类名称。</summary>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionNameAttribute">
+      <summary>表示在所有 Outlook 外接程序中唯一标识窗体区域的名称。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionNameAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionNameAttribute" /> 类的新实例。</summary>
+      <param name="name">一个在所有外接程序中唯一标识窗体区域的字符串。</param>
+    </member>
+    <member name="P:Microsoft.Office.Tools.Outlook.FormRegionNameAttribute.Name">
+      <summary>获取一个名称，该名称在所有外接程序中唯一标识窗体区域。</summary>
+      <returns>表示窗体区域名称的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.Office.Tools.Outlook.FormRegionStorageNullException">
+      <summary>表示当窗体区域工厂类的 <see cref="M:Microsoft.Office.Tools.Outlook.IFormRegionFactory.GetFormRegionStorage(System.Object,Microsoft.Office.Interop.Outlook.OlFormRegionMode,Microsoft.Office.Interop.Outlook.OlFormRegionSize)" /> 方法返回 null 时发生的错误。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionStorageNullException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionStorageNullException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionStorageNullException.#ctor(System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionStorageNullException.#ctor(System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.FormRegionStorageNullException.#ctor(System.String,System.Exception)"></member>
+    <member name="T:Microsoft.Office.Tools.Outlook.InvalidMessageClassException">
+      <summary>表示当指定邮件类名称无效时发生的错误。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.InvalidMessageClassException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Office.Tools.Outlook.InvalidMessageClassException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.InvalidMessageClassException.#ctor(System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.InvalidMessageClassException.#ctor(System.String)">
+      <summary>通过使用无效邮件类名称来初始化 <see cref="T:Microsoft.Office.Tools.Outlook.InvalidMessageClassException" /> 类的新实例。</summary>
+      <param name="messageClass">无效邮件类名称。</param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.Outlook.InvalidMessageClassException.#ctor(System.String,System.Exception)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.InvalidMessageClassException.#ctor(System.String,System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.Outlook.InvalidMessageClassException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"></member>
+    <member name="P:Microsoft.Office.Tools.Outlook.InvalidMessageClassException.MessageClass">
+      <summary>获取无效邮件类名称。</summary>
+      <returns>表示无效邮件类名称的字符串。</returns>
+    </member>
+  </members>
+</doc>

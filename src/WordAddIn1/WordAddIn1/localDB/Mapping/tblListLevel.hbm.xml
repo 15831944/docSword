@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"  encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="docSword" namespace="OfficeAssist.localDB.Model">
+  <class name="OfficeAssist.localDB.Model.tblListLevel,docSword" table="tblListLevel">
+    <id name="ID" column="ID" type="guid">
+
+    </id>
+    <property name="schemeName" column="schemeName" type="string"  />
+    <property name="schemeId" column="schemeId" type="int"  />
+    <property name="level" column="level" type="int"  />
+    <property name="NumberFormat" column="NumberFormat" type="string"  />
+    <property name="TrailingCharacter" column="TrailingCharacter" type="int"  />
+    <property name="NumberStyle" column="NumberStyle" type="int"  />
+    <property name="NumberPosition" column="NumberPosition" type="float"  />
+    <property name="Alignment" column="Alignment" type="int"  />
+    <property name="TextPosition" column="TextPosition" type="float"  />
+    <property name="ResetOnHigher" column="ResetOnHigher" type="int"  />
+    <property name="StartAt" column="StartAt" type="int"  />
+    <property name="LinkedStyle" column="LinkedStyle" type="string"  />
+    <property name="Bold" column="Bold" type="int"  />
+    <property name="Italic" column="Italic" type="int"  />
+    <property name="StrikeThrough" column="StrikeThrough" type="int"  />
+    <property name="Subscript" column="Subscript" type="int"  />
+    <property name="Superscript" column="Superscript" type="int"  />
+    <property name="Shadow" column="Shadow" type="int"  />
+    <property name="Outline" column="Outline" type="int"  />
+    <property name="Emboss" column="Emboss" type="int"  />
+    <property name="Engrave" column="Engrave" type="int"  />
+    <property name="AllCaps" column="AllCaps" type="int"  />
+    <property name="Hidden" column="Hidden" type="int"  />
+    <property name="Underline" column="Underline" type="int"  />
+    <property name="Color" column="Color" type="int"  />
+    <property name="Size" column="Size" type="float"  />
+    <property name="Animation" column="Animation" type="int"  />
+    <property name="DoubleStrikeThrough" column="DoubleStrikeThrough" type="int"  />
+    <property name="fntName" column="fntName" type="string"  />
+
+  </class>
+</hibernate-mapping>

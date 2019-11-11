@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PermissionControls>
+
+<function_group id="" showname="TaskPane" controlname="TaskPane" controltype="UserControl">
+    <function_group id="" showname="tabCtrl" controlname="tabCtrl" controltype="TabControl">
+      <function_group id="" showname="关联" controlname="tabPageRel" controltype="TabPage">
+        <function_item id="" showname="关键词" controlname="label1" controltype="Label">
+        </function_item>
+
+        <function_item id="" showname="m_tvRel" controlname="m_tvRel" controltype="TreeView">
+        </function_item>
+
+        <function_item id="" showname=">" controlname="btnFoundNext" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="重置" controlname="btnReset" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="《" controlname="btnFoundBack" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="txtRelKeyword" controlname="txtRelKeyword" controltype="TextBox">
+        </function_item>
+
+        <function_item id="" showname="查找" controlname="btnRelSearch" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="刷新" controlname="btnRefreshRels" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="全息" controlname="btnRelAllTxtOut" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="移动" controlname="btnMove" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="编辑器" controlname="btnExpEditor" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="txtRelName" controlname="txtRelName" controltype="TextBox">
+        </function_item>
+
+        <function_item id="" showname="公式" controlname="chboxOpRulesEnable" controltype="CheckBox">
+        </function_item>
+
+        <function_item id="" showname="txtRelContent" controlname="txtRelContent" controltype="TextBox">
+        </function_item>
+
+        <function_item id="" showname="txtOpRules" controlname="txtOpRules" controltype="TextBox">
+        </function_item>
+
+        <function_item id="" showname="内容" controlname="label2" controltype="Label">
+        </function_item>
+
+        <function_item id="" showname="增加" controlname="btnAddRel" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="名  称" controlname="label3" controltype="Label">
+        </function_item>
+
+        <function_item id="" showname="更新" controlname="btnUpdateRel" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="引用" controlname="btnInsertRel" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="跳转" controlname="btnJump2Rel" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="删除" controlname="btnRemoveRel" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="shapeContainer4" controlname="shapeContainer4" controltype="ShapeContainer">
+        </function_item>
+
+      </function_group>
+
+      <function_group id="" showname="结构图" controlname="tabPageOrganize" controltype="TabPage">
+        <function_item id="" showname="OrgProgressBar" controlname="OrgProgressBar" controltype="ProgressBar">
+        </function_item>
+
+        <function_item id="" showname="显示正文" controlname="chkOrgShowBody" controltype="CheckBox">
+        </function_item>
+
+        <function_item id="" showname="取消" controlname="btnOrgCancelProtect" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="保护" controlname="btnOrganProtect" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname=">" controlname="btnOrganNext" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="《" controlname="btnOrganBack" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="重置" controlname="btnOrganResetSearch" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="查找" controlname="btnOrganSearch" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="txtOrganKeyWord" controlname="txtOrganKeyWord" controltype="TextBox">
+        </function_item>
+
+        <function_item id="" showname="刷新" controlname="btnOrganizeRefresh" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="-" controlname="btnCollapseSel" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="+" controlname="btnExpandSelChild" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="全选" controlname="btnSelAll" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="全清" controlname="btnSelClear" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="降级" controlname="btnOrgDemote" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="升级" controlname="btnOrgPromote" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="chkSelCategory" controlname="chkSelCategory" controltype="CheckedListBox">
+        </function_item>
+
+        <function_item id="" showname="m_tvOrganize" controlname="m_tvOrganize" controltype="TreeView">
+        </function_item>
+
+        <function_item id="" showname="shapeContainer2" controlname="shapeContainer2" controltype="ShapeContainer">
+        </function_item>
+
+      </function_group>
+
+      <function_group id="" showname="文库" controlname="tabPageShare" controltype="TabPage">
+        <function_item id="" showname="打开" controlname="btnShareOpen" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="应用样式" controlname="btnLibApplyStyle" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="prgBarLib" controlname="prgBarLib" controltype="ProgressBar">
+        </function_item>
+
+        <function_item id="" showname="tvShareLib" controlname="tvShareLib" controltype="TreeView">
+        </function_item>
+
+        <function_item id="" showname="引用->" controlname="btnShareRef" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="刷新" controlname="btnShareRefresh" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="+" controlname="btnShareExpand" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="下载" controlname="btnShareDownload" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="-" controlname="btnShareCollapse" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="查找" controlname="btnShareSearch" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="重置" controlname="btnShareSearchReset" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="txtShareKeyWord" controlname="txtShareKeyWord" controltype="TextBox">
+        </function_item>
+
+        <function_item id="" showname="《" controlname="btnSharePrevSearch" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname=">" controlname="btnShareNextSearch" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="关键词" controlname="label6" controltype="Label">
+        </function_item>
+
+        <function_item id="" showname="+外部文件" controlname="btnShareExternalFile" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="txtShareName" controlname="txtShareName" controltype="TextBox">
+        </function_item>
+
+        <function_item id="" showname="名称" controlname="label5" controltype="Label">
+        </function_item>
+
+        <function_item id="" showname="增加" controlname="btnShareAdd" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="删除" controlname="btnShareRemove" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="公共库" controlname="chkBoxCommonLib" controltype="CheckBox">
+        </function_item>
+
+        <function_item id="" showname="分类" controlname="chkBoxCategory" controltype="CheckBox">
+        </function_item>
+
+        <function_item id="" showname="shapeContainer1" controlname="shapeContainer1" controltype="ShapeContainer">
+        </function_item>
+
+      </function_group>
+
+      <function_group id="" showname="检查" controlname="tabPageCheck" controltype="TabPage">
+        <function_item id="" showname="关键词" controlname="label4" controltype="Label">
+        </function_item>
+
+        <function_item id="" showname="progbarCheck" controlname="progbarCheck" controltype="ProgressBar">
+        </function_item>
+
+        <function_item id="" showname=">" controlname="btnCheckSearchNext" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="《" controlname="btnCheckSearchPrev" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="检查" controlname="btnCheck" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="重置" controlname="btnCheckReset" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="tvCheckedItems" controlname="tvCheckedItems" controltype="TreeView">
+        </function_item>
+
+        <function_item id="" showname="查找" controlname="btnCheckSearch" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="忽略" controlname="btnCheckIgnore" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="txtCheckSearchKeyWord" controlname="txtCheckSearchKeyWord" controltype="TextBox">
+        </function_item>
+
+      </function_group>
+
+      <function_group id="" showname="统一样式" controlname="tabPageUnitedStyle" controltype="TabPage">
+        <function_item id="" showname="txtBoxStyleInfo" controlname="txtBoxStyleInfo" controltype="TextBox">
+        </function_item>
+
+        <function_item id="" showname="样式信息" controlname="label13" controltype="Label">
+        </function_item>
+
+        <function_item id="" showname="progressBarStyle" controlname="progressBarStyle" controltype="ProgressBar">
+        </function_item>
+
+        <function_group id="" showname="应用范围" controlname="groupBox6" controltype="GroupBox">
+          <function_item id="" showname="选择部分" controlname="radioBtnStyleSelection" controltype="RadioButton">
+          </function_item>
+
+          <function_item id="" showname="全文" controlname="radioBtnStyleAllDoc" controltype="RadioButton">
+          </function_item>
+
+        </function_group>
+
+        <function_group id="" showname="groupBox4" controlname="groupBox4" controltype="GroupBox">
+          <function_item id="" showname="应用" controlname="btnStyleApply" controltype="Button">
+          </function_item>
+
+          <function_item id="" showname="样式文档" controlname="label11" controltype="Label">
+          </function_item>
+
+          <function_item id="" showname="txtBoxStyleFile" controlname="txtBoxStyleFile" controltype="TextBox">
+          </function_item>
+
+          <function_item id="" showname="浏览" controlname="btnStyleOpenFile" controltype="Button">
+          </function_item>
+
+        </function_group>
+
+      </function_group>
+
+      <function_group id="" showname="规范对比" controlname="tabPageCompare" controltype="TabPage">
+        <function_item id="" showname="progBarComp" controlname="progBarComp" controltype="ProgressBar">
+        </function_item>
+
+        <function_item id="" showname="对  比" controlname="btnExecCompare" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="txtCompResult" controlname="txtCompResult" controltype="TextBox">
+        </function_item>
+
+        <function_item id="" showname="tvCompCheck" controlname="tvCompCheck" controltype="TreeView">
+        </function_item>
+
+        <function_item id="" showname="tvCompStandard" controlname="tvCompStandard" controltype="TreeView">
+        </function_item>
+
+        <function_item id="" showname="严格顺序" controlname="chkCompStrickOrder" controltype="CheckBox">
+        </function_item>
+
+        <function_item id="" showname="大纲级别" controlname="chkCompOutline" controltype="CheckBox">
+        </function_item>
+
+        <function_item id="" showname="检查文档" controlname="label10" controltype="Label">
+        </function_item>
+
+        <function_item id="" showname="标准文档" controlname="label9" controltype="Label">
+        </function_item>
+
+        <function_item id="" showname="+" controlname="btnCompCheckDoc" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="txtComp2CheckDoc" controlname="txtComp2CheckDoc" controltype="TextBox">
+        </function_item>
+
+        <function_item id="" showname="+" controlname="btnCompStandardDoc" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="txtCompStandardDoc" controlname="txtCompStandardDoc" controltype="TextBox">
+        </function_item>
+
+      </function_group>
+
+      <function_group id="" showname="数据" controlname="tabPageData" controltype="TabPage">
+        <function_item id="" showname="标记数据项存在行合并" controlname="btnDataTagCombine" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="预览2条" controlname="btnDataPreviewOne" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="表信息（表名及字段）：鼠标右键插入名称，双击插入数据" controlname="label12" controltype="Label">
+        </function_item>
+
+        <function_item id="" showname="全部生成" controlname="btnDataProduce" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="trvData" controlname="trvData" controltype="TreeView">
+        </function_item>
+
+        <function_item id="" showname="插入数据" controlname="btnDataInsertData" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="插入名称" controlname="btnDataInsertName" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="删除关联" controlname="btnDataRemoveRel" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="打开数据源" controlname="btnDataDSource" controltype="Button">
+        </function_item>
+
+      </function_group>
+
+      <function_group id="" showname="内容复用" controlname="tabPageCntList" controltype="TabPage">
+        <function_item id="" showname="展开" controlname="btnCntListExpand" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="折叠" controlname="btnCntListCollapse" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="progBarCntList" controlname="progBarCntList" controltype="ProgressBar">
+        </function_item>
+
+        <function_item id="" showname="trvCntList" controlname="trvCntList" controltype="TreeView">
+        </function_item>
+
+        <function_item id="" showname="替换内容块" controlname="btnCntListCover" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="引用-->" controlname="btnCntListRef" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="删除" controlname="btnCntListRemove" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="增加" controlname="btnCntListAddDoc" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="txtBoxCntListFile" controlname="txtBoxCntListFile" controltype="TextBox">
+        </function_item>
+
+      </function_group>
+
+      <function_group id="" showname="表单" controlname="tabPageForm" controltype="TabPage">
+        <function_item id="" showname="注：支持仅一个段落的填报，回车无效" controlname="label14" controltype="Label">
+        </function_item>
+
+        <function_item id="" showname=">" controlname="btnFormNextSearch" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="tblFormLayoutPanel" controlname="tblFormLayoutPanel" controltype="TableLayoutPanel">
+        </function_item>
+
+        <function_item id="" showname="刷新" controlname="btnFormRefresh" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="《" controlname="btnFormPrevSearch" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="txtFormKeyWord" controlname="txtFormKeyWord" controltype="TextBox">
+        </function_item>
+
+        <function_item id="" showname="查找" controlname="btnFormSearch" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="重置" controlname="btnFormReset" controltype="Button">
+        </function_item>
+
+      </function_group>
+
+      <function_group id="" showname="信息" controlname="tabPageInfo" controltype="TabPage">
+        <function_item id="" showname="刷新" controlname="btnInfoRefresh" controltype="Button">
+        </function_item>
+
+        <function_item id="" showname="基本信息" controlname="txtInfoBody" controltype="TextBox">
+        </function_item>
+
+      </function_group>
+
+    </function_group>
+
+</function_group>
+
+<function_group id="" showname="右键菜单" controlname="rightMenu" controltype="ContextMenuStrip">
+    <function_item id="" showname="应用样式" controlname="menuItemApplyStyle" controltype="ToolStripMenuItem">
+    </function_item>
+
+    <function_item id="" showname="内容复用" controlname="menuItemCntReuse" controltype="ToolStripMenuItem">
+    </function_item>
+
+</function_group>
+
+<function_group id="" showname="Ribbon" controlname="Ribbon" controltype="OfficeRibbon">
+    <function_group id="" showname="工作板" controlname="grpPane" controltype="RibbonGroupImpl">
+      <function_item id="btnCopyHeadingStyles" showname="复制章节样式" controlname="btnCopyHeadingStyles" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnPasteHeadingStyles" showname="粘贴章节样式" controlname="btnPasteHeadingStyles" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnCopyFormat" showname="复制格式" controlname="btnCopyFormat" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnPasteFormat" showname="连续格式刷" controlname="btnPasteFormat" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnCut4LockCtrl" showname="剪切" controlname="btnCut4LockCtrl" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnPaste4LockCtrl" showname="粘贴" controlname="btnPaste4LockCtrl" controltype="RibbonButtonImpl">
+      </function_item>
+
+    </function_group>
+
+    <function_group id="" showname="自动编号" controlname="grpAutoNumbering" controltype="RibbonGroupImpl">
+      <function_item id="btnAutoNumberAsPrev" showname="同前级编号" controlname="btnAutoNumberAsPrev" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnAllReAutoNumbering" showname="更新标题编号" controlname="btnAllReAutoNumbering" controltype="RibbonButtonImpl">
+      </function_item>
+
+    </function_group>
+
+    <function_group id="" showname="快捷导航" controlname="grpQuickBookmark" controltype="RibbonGroupImpl">
+      <function_item id="btnNavAddBkmk" showname="快捷书签" controlname="btnNavAddBkmk" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnNavPrev" showname="上一个" controlname="btnNavPrev" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnNavNext" showname="下一个" controlname="btnNavNext" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnClearBkmk" showname="清除" controlname="btnClearBkmk" controltype="RibbonButtonImpl">
+      </function_item>
+
+    </function_group>
+
+    <function_group id="" showname="大纲级别" controlname="grpOutline" controltype="RibbonGroupImpl">
+      <function_item id="btnOutlineSamePrev" showname="同前级" controlname="btnOutlineSamePrev" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnOutlineLow1Prev" showname="低前一级" controlname="btnOutlineLow1Prev" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnOutlineHigh1Prev" showname="高前一级" controlname="btnOutlineHigh1Prev" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnOutlinePromote" showname="升级" controlname="btnOutlinePromote" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnOutlineDemote" showname="降级" controlname="btnOutlineDemote" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="listOutline" showname="级别" controlname="listOutline" controltype="RibbonDropDownImpl">
+      </function_item>
+
+    </function_group>
+
+    <function_group id="" showname="常用" controlname="grpComOp" controltype="RibbonGroupImpl">
+      <function_item id="btnAddHeaderLine" showname="设置页眉线" controlname="btnAddHeaderLine" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnRemoveHeaderLine" showname="清除页眉线" controlname="btnRemoveHeaderLine" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnStrictCenter" showname="增加整页标准居中" controlname="btnStrictCenter" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnCenterAllPics" showname="居中图片" controlname="btnCenterAllPics" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnRibCenterTables" showname="居中表格" controlname="btnRibCenterTables" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnNum2SimpCh" showname="数字转中文简" controlname="btnNum2SimpCh" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnNum2BigSimpCh" showname="数字转中文大写" controlname="btnNum2BigSimpCh" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnNum2Arabic" showname="转阿拉伯数字" controlname="btnNum2Arabic" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="chkBoxUpdTblCntOnSaving" showname="保存时更新目录" controlname="chkBoxUpdTblCntOnSaving" controltype="RibbonCheckBoxImpl">
+      </function_item>
+
+      <function_item id="chkBoxUpdTblCntOnClose" showname="关闭时更新目录" controlname="chkBoxUpdTblCntOnClose" controltype="RibbonCheckBoxImpl">
+      </function_item>
+
+    </function_group>
+
+    <function_group id="" showname="表单工具" controlname="grpFormTool" controltype="RibbonGroupImpl">
+      <function_item id="btnInsertRichTextBox" showname="文本域" controlname="btnInsertRichTextBox" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnPictureCntCtrl" showname="图片内容控件" controlname="btnPictureCntCtrl" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnCombox" showname="组合框" controlname="btnCombox" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnListBox" showname="下拉列表" controlname="btnListBox" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnDatePicker" showname="日期选取器" controlname="btnDatePicker" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnProperty" showname="属性" controlname="btnProperty" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnCntctrlLock" showname="锁定" controlname="btnCntctrlLock" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnCntctrlUnlock" showname="解锁" controlname="btnCntctrlUnlock" controltype="RibbonButtonImpl">
+      </function_item>
+
+    </function_group>
+
+    <function_group id="" showname="功能页" controlname="grpFuncPages" controltype="RibbonGroupImpl">
+      <function_item id="toggleTaskWin" showname="切换任务窗" controlname="toggleTaskWin" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnTogglePanePos" showname="左右切换" controlname="btnTogglePanePos" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnToggleRelPage" showname="关联" controlname="btnToggleRelPage" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnToggleOrg" showname="增强结构图" controlname="btnToggleOrg" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnToggleShare" showname="分享" controlname="btnToggleShare" controltype="RibbonButtonImpl">
+      </function_item>
+
+    </function_group>
+
+    <function_group id="" showname="登录" controlname="grpConfig" controltype="RibbonGroupImpl">
+      <function_item id="btnLogin" showname="登录" controlname="btnLogin" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnRibConfig" showname="配置" controlname="btnRibConfig" controltype="RibbonButtonImpl">
+      </function_item>
+
+      <function_item id="btnRibTest" showname="TEST" controlname="btnRibTest" controltype="RibbonButtonImpl">
+      </function_item>
+
+    </function_group>
+
+</function_group>
+
+</PermissionControls>

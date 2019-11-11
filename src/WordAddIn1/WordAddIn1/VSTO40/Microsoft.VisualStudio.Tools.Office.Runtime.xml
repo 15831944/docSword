@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.Tools.Office.Runtime</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.AddEntryPoint(System.String)">
+      <param name="className"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.ExecuteCustomizationExceptionDetails"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.ExecuteCustomizationExceptionHResult"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.ExecuteEntryPoints"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.InitializeEntryPoints"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.LoadEntryPoints"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.Microsoft#VisualStudio#Tools#Office#Runtime#IEntryPointView#AddEntryPoint(System.String)">
+      <param name="className"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.Microsoft#VisualStudio#Tools#Office#Runtime#IEntryPointView#Execute"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.Microsoft#VisualStudio#Tools#Office#Runtime#IEntryPointView#SetAssemblyName(System.String)">
+      <param name="assemblyName"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.Microsoft#VisualStudio#Tools#Office#Runtime#IEntryPointView#SetServiceProvider(System.IntPtr)">
+      <param name="unkHostServiceProvider"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.SetAssemblyName(System.String)">
+      <param name="assemblyName"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.SetServiceProvider(System.IntPtr)">
+      <param name="unkHostServiceProvider"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.EntryPointView.Shutdown"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Office.Runtime.IEntryPointView"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.IEntryPointView.AddEntryPoint(System.String)">
+      <param name="className"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.IEntryPointView.Execute"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.IEntryPointView.SetAssemblyName(System.String)">
+      <param name="assemblyName"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.IEntryPointView.SetServiceProvider(System.IntPtr)">
+      <param name="unkHostServiceProvider"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry">
+      <summary>Represents an entry in the user inclusion list. This class cannot be inherited. </summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry.#ctor(System.Uri,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" /> class.</summary>
+      <param name="uri">A <see cref="T:System.Uri" /> that specifies the uniform resource identifier (URI) of the deployment manifest. </param>
+      <param name="publicKey">The entire <see cref="T:System.Security.Cryptography.Xml.RSAKeyValue" />  element that is used as the signing key, including the element tags &lt;RSAValue&gt;&lt;/RSAValue&gt;.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="publicKey" /> is null.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="publicKey" /> is an empty string.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry.Equals(System.Object)">
+      <summary>Indicates whether the specified <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" /> is equal to the current <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" />.</summary>
+      <returns>true if <paramref name="obj" /> is equal to the current <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" />; otherwise, false.</returns>
+      <param name="obj">The <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" /> to compare with the current <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" />.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry.GetHashCode"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry.PublicKey">
+      <summary>Gets the public key that is associated with this inclusion list entry.</summary>
+      <returns>A string that contains the value of the public key that is associated with this inclusion list entry.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry.Uri">
+      <summary>Gets a uniform resource identifier (URI) that specifies the location of the deployment manifest.</summary>
+      <returns>A <see cref="T:System.Uri" /> that specifies the location of the deployment manifest.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.UserInclusionList">
+      <summary>Represents the user inclusion list, and enables you to add entries, remove entries, and check whether a particular entry is in the list. This class cannot be inherited.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.Security.UserInclusionList.Add(Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry)">
+      <summary>Adds the specified <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" /> object to the inclusion list.</summary>
+      <param name="securityEntry">An <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" /> that contains a <see cref="P:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry.Uri" /> and a <see cref="P:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry.PublicKey" />.</param>
+      <exception cref="T:System.ArgumentNullException">The <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" /> is null.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.Security.UserInclusionList.Contains(Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry)">
+      <summary>Returns a value that indicates whether the inclusion list already has an entry that matches the <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" /> parameter.</summary>
+      <returns>true if the inclusion list exists and the supplied <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" /> is in the inclusion list; otherwise, false.</returns>
+      <param name="securityEntry">An <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" /> that contains a <see cref="P:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry.Uri" /> and a <see cref="P:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry.PublicKey" />.</param>
+      <exception cref="T:System.ArgumentNullException">The <see cref="T:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry" /> is null.</exception>
+      <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Deployment.InvalidRegistryStoreValueException">The <see cref="P:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry.PublicKey" /> and <see cref="P:Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry.Uri" /> create an invalid registry entry.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Office.Runtime.Security.UserInclusionList.Remove(System.Uri)">
+      <summary>Deletes the inclusion list entry whose URI matches the parameter passed to the method.</summary>
+      <param name="uri">A <see cref="T:System.Uri" /> that specifies the location of the deployment manifest.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="uri" /> is null.</exception>
+    </member>
+  </members>
+</doc>
